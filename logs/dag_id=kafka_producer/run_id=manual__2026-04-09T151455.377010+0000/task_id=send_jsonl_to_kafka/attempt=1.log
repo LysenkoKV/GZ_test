@@ -1,0 +1,70 @@
+[2026-04-09T15:14:56.625+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T15:14:56.652+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-09T15:14:55.377010+00:00 [queued]>
+[2026-04-09T15:14:56.664+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-09T15:14:55.377010+00:00 [queued]>
+[2026-04-09T15:14:56.665+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T15:14:56.685+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): send_jsonl_to_kafka> on 2026-04-09 15:14:55.377010+00:00
+[2026-04-09T15:14:56.695+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=104) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T15:14:56.698+0000] {standard_task_runner.py:72} INFO - Started process 105 to run task
+[2026-04-09T15:14:56.700+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'send_jsonl_to_kafka', 'manual__2026-04-09T15:14:55.377010+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmp4xjoi22j']
+[2026-04-09T15:14:56.702+0000] {standard_task_runner.py:105} INFO - Job 59: Subtask send_jsonl_to_kafka
+[2026-04-09T15:14:56.805+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-09T15:14:55.377010+00:00 [running]> on host 2d41fd9e80ad
+[2026-04-09T15:14:56.913+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='send_jsonl_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T15:14:55.377010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T15:14:55.377010+00:00'
+[2026-04-09T15:14:56.915+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T15:14:56.945+0000] {logging_mixin.py:190} INFO - 📄 Обработка файла: browser_events.jsonl
+[2026-04-09T15:14:56.950+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 100 сообщений
+[2026-04-09T15:14:56.955+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 200 сообщений
+[2026-04-09T15:14:56.960+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 300 сообщений
+[2026-04-09T15:14:56.965+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 400 сообщений
+[2026-04-09T15:14:56.971+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 500 сообщений
+[2026-04-09T15:14:56.976+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 600 сообщений
+[2026-04-09T15:14:56.980+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 700 сообщений
+[2026-04-09T15:14:56.983+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 800 сообщений
+[2026-04-09T15:14:56.985+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 900 сообщений
+[2026-04-09T15:14:56.988+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 1000 сообщений
+[2026-04-09T15:14:56.990+0000] {logging_mixin.py:190} INFO -   ✅ Файл browser_events.jsonl обработан
+[2026-04-09T15:14:56.990+0000] {logging_mixin.py:190} INFO - 📄 Обработка файла: device_events.jsonl
+[2026-04-09T15:14:56.998+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 100 сообщений
+[2026-04-09T15:14:57.005+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 200 сообщений
+[2026-04-09T15:14:57.017+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 300 сообщений
+[2026-04-09T15:14:57.019+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 400 сообщений
+[2026-04-09T15:14:57.023+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 500 сообщений
+[2026-04-09T15:14:57.026+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 600 сообщений
+[2026-04-09T15:14:57.031+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 700 сообщений
+[2026-04-09T15:14:57.035+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 800 сообщений
+[2026-04-09T15:14:57.037+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 900 сообщений
+[2026-04-09T15:14:57.040+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 1000 сообщений
+[2026-04-09T15:14:57.041+0000] {logging_mixin.py:190} INFO -   ✅ Файл device_events.jsonl обработан
+[2026-04-09T15:14:57.042+0000] {logging_mixin.py:190} INFO - 📄 Обработка файла: geo_events.jsonl
+[2026-04-09T15:14:57.048+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 100 сообщений
+[2026-04-09T15:14:57.051+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 200 сообщений
+[2026-04-09T15:14:57.054+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 300 сообщений
+[2026-04-09T15:14:57.056+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 400 сообщений
+[2026-04-09T15:14:57.060+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 500 сообщений
+[2026-04-09T15:14:57.062+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 600 сообщений
+[2026-04-09T15:14:57.065+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 700 сообщений
+[2026-04-09T15:14:57.067+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 800 сообщений
+[2026-04-09T15:14:57.070+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 900 сообщений
+[2026-04-09T15:14:57.072+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 1000 сообщений
+[2026-04-09T15:14:57.073+0000] {logging_mixin.py:190} INFO -   ✅ Файл geo_events.jsonl обработан
+[2026-04-09T15:14:57.074+0000] {logging_mixin.py:190} INFO - 📄 Обработка файла: location_events.jsonl
+[2026-04-09T15:14:57.080+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 100 сообщений
+[2026-04-09T15:14:57.082+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 200 сообщений
+[2026-04-09T15:14:57.085+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 300 сообщений
+[2026-04-09T15:14:57.092+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 400 сообщений
+[2026-04-09T15:14:57.096+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 500 сообщений
+[2026-04-09T15:14:57.098+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 600 сообщений
+[2026-04-09T15:14:57.110+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 700 сообщений
+[2026-04-09T15:14:57.116+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 800 сообщений
+[2026-04-09T15:14:57.119+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 900 сообщений
+[2026-04-09T15:14:57.124+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 1000 сообщений
+[2026-04-09T15:14:57.125+0000] {logging_mixin.py:190} INFO -   ✅ Файл location_events.jsonl обработан
+[2026-04-09T15:14:57.126+0000] {logging_mixin.py:190} INFO - 
+✅ Итого: 4 файлов, 4000 сообщений отправлено в топик location_events
+[2026-04-09T15:14:57.128+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-09T15:14:57.140+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T15:14:57.141+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=send_jsonl_to_kafka, run_id=manual__2026-04-09T15:14:55.377010+00:00, execution_date=20260409T151455, start_date=20260409T151456, end_date=20260409T151457
+[2026-04-09T15:14:57.205+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-09T15:14:57.235+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:14:57.239+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

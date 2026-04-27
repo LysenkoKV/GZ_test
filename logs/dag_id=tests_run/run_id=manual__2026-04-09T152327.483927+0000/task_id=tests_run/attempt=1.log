@@ -1,0 +1,75 @@
+[2026-04-09T15:23:28.479+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T15:23:28.502+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tests_run.tests_run manual__2026-04-09T15:23:27.483927+00:00 [queued]>
+[2026-04-09T15:23:28.512+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tests_run.tests_run manual__2026-04-09T15:23:27.483927+00:00 [queued]>
+[2026-04-09T15:23:28.513+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T15:23:28.528+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): tests_run> on 2026-04-09 15:23:27.483927+00:00
+[2026-04-09T15:23:28.536+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=253) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T15:23:28.538+0000] {standard_task_runner.py:72} INFO - Started process 254 to run task
+[2026-04-09T15:23:28.539+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tests_run', 'tests_run', 'manual__2026-04-09T15:23:27.483927+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/tests_run.py', '--cfg-path', '/tmp/tmpf80zkktr']
+[2026-04-09T15:23:28.541+0000] {standard_task_runner.py:105} INFO - Job 79: Subtask tests_run
+[2026-04-09T15:23:28.604+0000] {task_command.py:467} INFO - Running <TaskInstance: tests_run.tests_run manual__2026-04-09T15:23:27.483927+00:00 [running]> on host 2d41fd9e80ad
+[2026-04-09T15:23:28.709+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tests_run' AIRFLOW_CTX_TASK_ID='tests_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T15:23:27.483927+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T15:23:27.483927+00:00'
+[2026-04-09T15:23:28.712+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T15:23:35.425+0000] {logging_mixin.py:190} INFO - 15:23:31  Running with dbt=1.7.0
+15:23:31  Registered adapter: clickhouse=1.7.0
+15:23:32  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.clickhouse_etl.raw
+15:23:32  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+15:23:32  
+15:23:33  Concurrency: 1 threads (target='dev')
+15:23:33  
+15:23:33  1 of 20 START test accepted_values_dds_device_device_is_mobile__True__False .... [RUN]
+15:23:33  1 of 20 PASS accepted_values_dds_device_device_is_mobile__True__False .......... [PASS in 0.18s]
+15:23:33  2 of 20 START test accepted_values_dds_device_device_type__Mobile__Computer .... [RUN]
+15:23:33  2 of 20 PASS accepted_values_dds_device_device_type__Mobile__Computer .......... [PASS in 0.05s]
+15:23:33  3 of 20 START test dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ...... [RUN]
+15:23:33  3 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ............ [PASS in 0.06s]
+15:23:33  4 of 20 START test dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ... [RUN]
+15:23:33  4 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ......... [PASS in 0.04s]
+15:23:33  5 of 20 START test dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [RUN]
+15:23:33  5 of 20 PASS dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [PASS in 0.05s]
+15:23:33  6 of 20 START test email_test_dds_device_user_custom_id ........................ [RUN]
+15:23:33  6 of 20 PASS email_test_dds_device_user_custom_id .............................. [PASS in 0.05s]
+15:23:33  7 of 20 START test not_null_dds_browser_click_id ............................... [RUN]
+15:23:33  7 of 20 PASS not_null_dds_browser_click_id ..................................... [PASS in 0.05s]
+15:23:33  8 of 20 START test not_null_dds_browser_event_id ............................... [RUN]
+15:23:33  8 of 20 PASS not_null_dds_browser_event_id ..................................... [PASS in 0.04s]
+15:23:33  9 of 20 START test not_null_dds_device_click_id ................................ [RUN]
+15:23:33  9 of 20 PASS not_null_dds_device_click_id ...................................... [PASS in 0.05s]
+15:23:33  10 of 20 START test not_null_dds_geo_click_id .................................. [RUN]
+15:23:33  10 of 20 PASS not_null_dds_geo_click_id ........................................ [PASS in 0.04s]
+15:23:33  11 of 20 START test not_null_dds_location_event_id ............................. [RUN]
+15:23:34  11 of 20 PASS not_null_dds_location_event_id ................................... [PASS in 0.04s]
+15:23:34  12 of 20 START test relationships_dds_browser_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:23:34  12 of 20 PASS relationships_dds_browser_click_id__click_id__ref_dds_fct_click_ . [PASS in 0.05s]
+15:23:34  13 of 20 START test relationships_dds_browser_event_id__event_id__ref_dds_fct_click_  [RUN]
+15:23:34  13 of 20 PASS relationships_dds_browser_event_id__event_id__ref_dds_fct_click_ . [PASS in 0.05s]
+15:23:34  14 of 20 START test relationships_dds_device_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:23:34  14 of 20 PASS relationships_dds_device_click_id__click_id__ref_dds_fct_click_ .. [PASS in 0.04s]
+15:23:34  15 of 20 START test relationships_dds_geo_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:23:34  15 of 20 PASS relationships_dds_geo_click_id__click_id__ref_dds_fct_click_ ..... [PASS in 0.04s]
+15:23:34  16 of 20 START test relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [RUN]
+15:23:34  16 of 20 PASS relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [PASS in 0.04s]
+15:23:34  17 of 20 START test unique_dds_browser_event_id ................................ [RUN]
+15:23:34  17 of 20 PASS unique_dds_browser_event_id ...................................... [PASS in 0.09s]
+15:23:34  18 of 20 START test unique_dds_device_click_id ................................. [RUN]
+15:23:34  18 of 20 PASS unique_dds_device_click_id ....................................... [PASS in 0.04s]
+15:23:34  19 of 20 START test unique_dds_geo_click_id .................................... [RUN]
+15:23:34  19 of 20 PASS unique_dds_geo_click_id .......................................... [PASS in 0.04s]
+15:23:34  20 of 20 START test unique_dds_location_event_id ............................... [RUN]
+15:23:34  20 of 20 PASS unique_dds_location_event_id ..................................... [PASS in 0.04s]
+15:23:34  
+15:23:34  Finished running 20 tests in 0 hours 0 minutes and 1.52 seconds (1.52s).
+15:23:34  
+15:23:34  Completed successfully
+15:23:34  
+15:23:34  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+[2026-04-09T15:23:35.426+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-09T15:23:35.439+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T15:23:35.440+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tests_run, task_id=tests_run, run_id=manual__2026-04-09T15:23:27.483927+00:00, execution_date=20260409T152327, start_date=20260409T152328, end_date=20260409T152335
+[2026-04-09T15:23:35.511+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-09T15:23:35.528+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:23:35.532+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

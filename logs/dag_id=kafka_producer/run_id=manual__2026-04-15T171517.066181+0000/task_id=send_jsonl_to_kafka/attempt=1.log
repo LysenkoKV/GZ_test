@@ -1,0 +1,71 @@
+[2026-04-15T17:15:19.597+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-15T17:15:19.620+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-15T17:15:17.066181+00:00 [queued]>
+[2026-04-15T17:15:19.630+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-15T17:15:17.066181+00:00 [queued]>
+[2026-04-15T17:15:19.631+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-15T17:15:19.654+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): send_jsonl_to_kafka> on 2026-04-15 17:15:17.066181+00:00
+[2026-04-15T17:15:19.660+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=83) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-15T17:15:19.663+0000] {standard_task_runner.py:72} INFO - Started process 84 to run task
+[2026-04-15T17:15:19.663+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'send_jsonl_to_kafka', 'manual__2026-04-15T17:15:17.066181+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpfx64s_9d']
+[2026-04-15T17:15:19.665+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask send_jsonl_to_kafka
+[2026-04-15T17:15:19.740+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-04-15T17:15:17.066181+00:00 [running]> on host bfdc81498a94
+[2026-04-15T17:15:19.857+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='send_jsonl_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T17:15:17.066181+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-15T17:15:17.066181+00:00'
+[2026-04-15T17:15:19.858+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-15T17:15:19.888+0000] {kafka_load.py:28} INFO - Обрабатывается файл: browser_events.jsonl
+[2026-04-15T17:15:19.893+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-15T17:15:19.896+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-15T17:15:19.898+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-15T17:15:19.900+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-15T17:15:19.902+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-15T17:15:19.905+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-15T17:15:19.907+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-15T17:15:19.910+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-15T17:15:19.913+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-15T17:15:19.916+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-15T17:15:19.917+0000] {kafka_load.py:53} INFO - Обработка файла browser_events.jsonl завершена
+[2026-04-15T17:15:19.918+0000] {kafka_load.py:28} INFO - Обрабатывается файл: device_events.jsonl
+[2026-04-15T17:15:19.921+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-15T17:15:19.923+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-15T17:15:19.925+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-15T17:15:19.928+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-15T17:15:19.930+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-15T17:15:19.932+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-15T17:15:19.936+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-15T17:15:19.938+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-15T17:15:19.941+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-15T17:15:19.951+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-15T17:15:19.951+0000] {kafka_load.py:42} ERROR - Ошибка JSON в строке: 1001: Expecting ':' delimiter: line 1 column 19 (char 18)
+[2026-04-15T17:15:19.953+0000] {kafka_load.py:51} ERROR - Не удалось записать в лог CH строку под номером: 1001 из-за ошибки: Object of type bytes is not JSON serializable
+[2026-04-15T17:15:19.955+0000] {kafka_load.py:53} INFO - Обработка файла device_events.jsonl завершена
+[2026-04-15T17:15:19.956+0000] {kafka_load.py:28} INFO - Обрабатывается файл: geo_events.jsonl
+[2026-04-15T17:15:19.961+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-15T17:15:19.963+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-15T17:15:19.965+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-15T17:15:19.968+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-15T17:15:19.970+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-15T17:15:19.972+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-15T17:15:19.974+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-15T17:15:19.977+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-15T17:15:19.979+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-15T17:15:19.982+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-15T17:15:19.983+0000] {kafka_load.py:53} INFO - Обработка файла geo_events.jsonl завершена
+[2026-04-15T17:15:19.984+0000] {kafka_load.py:28} INFO - Обрабатывается файл: location_events.jsonl
+[2026-04-15T17:15:19.988+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-15T17:15:19.995+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-15T17:15:19.999+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-15T17:15:20.007+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-15T17:15:20.012+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-15T17:15:20.016+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-15T17:15:20.020+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-15T17:15:20.026+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-15T17:15:20.030+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-15T17:15:20.034+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-15T17:15:20.036+0000] {kafka_load.py:53} INFO - Обработка файла location_events.jsonl завершена
+[2026-04-15T17:15:20.038+0000] {kafka_load.py:56} INFO - Обработка файлов успешно завершена
+[2026-04-15T17:15:20.040+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-15T17:15:20.056+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-15T17:15:20.057+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=send_jsonl_to_kafka, run_id=manual__2026-04-15T17:15:17.066181+00:00, execution_date=20260415T171517, start_date=20260415T171519, end_date=20260415T171520
+[2026-04-15T17:15:20.125+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-15T17:15:20.154+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T17:15:20.156+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

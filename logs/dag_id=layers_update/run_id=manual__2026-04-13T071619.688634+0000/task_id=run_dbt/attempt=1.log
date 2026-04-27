@@ -1,0 +1,165 @@
+[2026-04-13T07:16:20.894+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-13T07:16:20.920+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-13T07:16:19.688634+00:00 [queued]>
+[2026-04-13T07:16:20.930+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-13T07:16:19.688634+00:00 [queued]>
+[2026-04-13T07:16:20.931+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-13T07:16:20.948+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt> on 2026-04-13 07:16:19.688634+00:00
+[2026-04-13T07:16:20.959+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=64) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-13T07:16:20.963+0000] {standard_task_runner.py:72} INFO - Started process 65 to run task
+[2026-04-13T07:16:20.963+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'layers_update', 'run_dbt', 'manual__2026-04-13T07:16:19.688634+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/layers_update.py', '--cfg-path', '/tmp/tmprr67s6gj']
+[2026-04-13T07:16:20.965+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask run_dbt
+[2026-04-13T07:16:21.048+0000] {task_command.py:467} INFO - Running <TaskInstance: layers_update.run_dbt manual__2026-04-13T07:16:19.688634+00:00 [running]> on host d6d5614e9793
+[2026-04-13T07:16:21.159+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='layers_update' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2026-04-13T07:16:19.688634+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-13T07:16:19.688634+00:00'
+[2026-04-13T07:16:21.161+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-13T07:16:21.182+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-04-13T07:16:21.183+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt run']
+[2026-04-13T07:16:21.195+0000] {subprocess.py:99} INFO - Output:
+[2026-04-13T07:16:24.781+0000] {subprocess.py:106} INFO - [0m07:16:24  Running with dbt=1.7.0
+[2026-04-13T07:16:25.141+0000] {subprocess.py:106} INFO - [0m07:16:25  Registered adapter: clickhouse=1.7.0
+[2026-04-13T07:16:26.604+0000] {subprocess.py:106} INFO - [0m07:16:26  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-13T07:16:26.606+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-04-13T07:16:26.607+0000] {subprocess.py:106} INFO - - models.clickhouse_etl.raw
+[2026-04-13T07:16:26.650+0000] {subprocess.py:106} INFO - [0m07:16:26  Found 13 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+[2026-04-13T07:16:26.656+0000] {subprocess.py:106} INFO - [0m07:16:26
+[2026-04-13T07:16:27.285+0000] {subprocess.py:106} INFO - [0m07:16:27  Concurrency: 1 threads (target='dev')
+[2026-04-13T07:16:27.287+0000] {subprocess.py:106} INFO - [0m07:16:27
+[2026-04-13T07:16:27.299+0000] {subprocess.py:106} INFO - [0m07:16:27  1 of 13 START sql incremental model `ods_ods`.`browser_data` ................... [RUN]
+[2026-04-13T07:16:27.720+0000] {subprocess.py:106} INFO - [0m07:16:27  1 of 13 OK created sql incremental model `ods_ods`.`browser_data` .............. [[32mOK[0m in 0.42s]
+[2026-04-13T07:16:27.724+0000] {subprocess.py:106} INFO - [0m07:16:27  2 of 13 START sql incremental model `ods_ods`.`device_data` .................... [RUN]
+[2026-04-13T07:16:27.961+0000] {subprocess.py:106} INFO - [0m07:16:27  2 of 13 OK created sql incremental model `ods_ods`.`device_data` ............... [[32mOK[0m in 0.23s]
+[2026-04-13T07:16:27.965+0000] {subprocess.py:106} INFO - [0m07:16:27  3 of 13 START sql incremental model `ods_ods`.`geo_data` ....................... [RUN]
+[2026-04-13T07:16:28.196+0000] {subprocess.py:106} INFO - [0m07:16:28  3 of 13 OK created sql incremental model `ods_ods`.`geo_data` .................. [[32mOK[0m in 0.23s]
+[2026-04-13T07:16:28.200+0000] {subprocess.py:106} INFO - [0m07:16:28  4 of 13 START sql incremental model `ods_ods`.`location_data` .................. [RUN]
+[2026-04-13T07:16:28.480+0000] {subprocess.py:106} INFO - [0m07:16:28  4 of 13 OK created sql incremental model `ods_ods`.`location_data` ............. [[32mOK[0m in 0.28s]
+[2026-04-13T07:16:28.483+0000] {subprocess.py:106} INFO - [0m07:16:28  5 of 13 START sql incremental model `ods_dds`.`dim_browser` .................... [RUN]
+[2026-04-13T07:16:28.722+0000] {subprocess.py:106} INFO - [0m07:16:28  5 of 13 OK created sql incremental model `ods_dds`.`dim_browser` ............... [[32mOK[0m in 0.24s]
+[2026-04-13T07:16:28.725+0000] {subprocess.py:106} INFO - [0m07:16:28  6 of 13 START sql incremental model `ods_dds`.`dim_device` ..................... [RUN]
+[2026-04-13T07:16:28.955+0000] {subprocess.py:106} INFO - [0m07:16:28  6 of 13 OK created sql incremental model `ods_dds`.`dim_device` ................ [[32mOK[0m in 0.23s]
+[2026-04-13T07:16:28.958+0000] {subprocess.py:106} INFO - [0m07:16:28  7 of 13 START sql incremental model `ods_dds`.`fct_click` ...................... [RUN]
+[2026-04-13T07:16:29.198+0000] {subprocess.py:106} INFO - [0m07:16:29  7 of 13 OK created sql incremental model `ods_dds`.`fct_click` ................. [[32mOK[0m in 0.24s]
+[2026-04-13T07:16:29.201+0000] {subprocess.py:106} INFO - [0m07:16:29  8 of 13 START sql incremental model `ods_dds`.`dim_geo` ........................ [RUN]
+[2026-04-13T07:16:29.411+0000] {subprocess.py:106} INFO - [0m07:16:29  8 of 13 OK created sql incremental model `ods_dds`.`dim_geo` ................... [[32mOK[0m in 0.21s]
+[2026-04-13T07:16:29.415+0000] {subprocess.py:106} INFO - [0m07:16:29  9 of 13 START sql incremental model `ods_dds`.`dim_location` ................... [RUN]
+[2026-04-13T07:16:29.645+0000] {subprocess.py:106} INFO - [0m07:16:29  9 of 13 OK created sql incremental model `ods_dds`.`dim_location` .............. [[32mOK[0m in 0.23s]
+[2026-04-13T07:16:29.648+0000] {subprocess.py:106} INFO - [0m07:16:29  10 of 13 START sql view model `ods_dm`.`geo_stat` .............................. [RUN]
+[2026-04-13T07:16:29.729+0000] {subprocess.py:106} INFO - [0m07:16:29  10 of 13 OK created sql view model `ods_dm`.`geo_stat` ......................... [[32mOK[0m in 0.08s]
+[2026-04-13T07:16:29.732+0000] {subprocess.py:106} INFO - [0m07:16:29  11 of 13 START sql incremental model `ods_dm`.`daily_aggregates` ............... [RUN]
+[2026-04-13T07:16:29.842+0000] {subprocess.py:106} INFO - [0m07:16:29  11 of 13 OK created sql incremental model `ods_dm`.`daily_aggregates` .......... [[32mOK[0m in 0.11s]
+[2026-04-13T07:16:29.845+0000] {subprocess.py:106} INFO - [0m07:16:29  12 of 13 START sql incremental model `ods_dm`.`dashboard` ...................... [RUN]
+[2026-04-13T07:16:29.956+0000] {subprocess.py:106} INFO - [0m07:16:29  12 of 13 ERROR creating sql incremental model `ods_dm`.`dashboard` ............. [[31mERROR[0m in 0.11s]
+[2026-04-13T07:16:29.961+0000] {subprocess.py:106} INFO - [0m07:16:29  13 of 13 START sql view model `ods_dm`.`popular_source` ........................ [RUN]
+[2026-04-13T07:16:30.023+0000] {subprocess.py:106} INFO - [0m07:16:30  13 of 13 OK created sql view model `ods_dm`.`popular_source` ................... [[32mOK[0m in 0.06s]
+[2026-04-13T07:16:30.032+0000] {subprocess.py:106} INFO - [0m07:16:30
+[2026-04-13T07:16:30.033+0000] {subprocess.py:106} INFO - [0m07:16:30  Finished running 11 incremental models, 2 view models in 0 hours 0 minutes and 3.37 seconds (3.37s).
+[2026-04-13T07:16:30.073+0000] {subprocess.py:106} INFO - [0m07:16:30
+[2026-04-13T07:16:30.074+0000] {subprocess.py:106} INFO - [0m07:16:30  [31mCompleted with 1 error and 0 warnings:[0m
+[2026-04-13T07:16:30.075+0000] {subprocess.py:106} INFO - [0m07:16:30
+[2026-04-13T07:16:30.076+0000] {subprocess.py:106} INFO - [0m07:16:30    Database Error in model dm_dashboard (models/dm/dm_dashboard.sql)
+[2026-04-13T07:16:30.077+0000] {subprocess.py:106} INFO -   Code: 47.
+[2026-04-13T07:16:30.078+0000] {subprocess.py:106} INFO -   DB::Exception: Unknown expression or function identifier `f.click_id` in scope SELECT toDate(fct.event_timestamp) AS event_date, coalesce(geo.geo_country, 'Unknown') AS geo_country, coalesce(br.browser_name, 'Unknown') AS browser_name, coalesce(dv.device_is_mobile, false) AS device_is_mobile, coalesce(loc.utm_source, 'direct') AS utm_source, coalesce(loc.utm_medium, 'none') AS utm_medium, coalesce(loc.utm_campaign, 'none') AS utm_campaign, countDistinct(f.click_id) AS unique_clicks, count(fct.event_id) AS total_events, countIf(dv.device_is_mobile = true) AS mobile_clicks, fct.__dds_load_time AS __dds_load_time FROM ods_dds.fct_click AS fct LEFT JOIN ods_dds.dim_geo AS geo ON fct.click_id = geo.click_id LEFT JOIN ods_dds.dim_browser AS br ON (fct.click_id = br.click_id) AND (fct.event_id = br.event_id) LEFT JOIN ods_dds.dim_device AS dv ON fct.click_id = dv.click_id LEFT JOIN ods_dds.dim_location AS loc ON fct.event_id = loc.event_id WHERE 1 = 1 GROUP BY event_date, geo_country, browser_name, device_is_mobile, utm_source, utm_medium, utm_campaign. Maybe you meant: ['dv.click_id']. Stack trace:
+[2026-04-13T07:16:30.078+0000] {subprocess.py:106} INFO - 
+[2026-04-13T07:16:30.079+0000] {subprocess.py:106} INFO -   0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+[2026-04-13T07:16:30.080+0000] {subprocess.py:106} INFO -   1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+[2026-04-13T07:16:30.080+0000] {subprocess.py:106} INFO -   2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+[2026-04-13T07:16:30.081+0000] {subprocess.py:106} INFO -   3. DB::Exception::Exception<char const*, String&, String, String, String>(int, FormatStringHelperImpl<std::type_identity<char const*>::type, std::type_identity<String&>::type, std::type_identity<String>::type, std::type_identity<String>::type, std::type_identity<String>::type>, char const*&&, String&, String&&, String&&, String&&) @ 0x000000001aa880cf
+[2026-04-13T07:16:30.082+0000] {subprocess.py:106} INFO -   4. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool) @ 0x000000001aa6372a
+[2026-04-13T07:16:30.082+0000] {subprocess.py:106} INFO -   5. DB::QueryAnalyzer::resolveExpressionNodeList(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool) @ 0x000000001aa60b81
+[2026-04-13T07:16:30.083+0000] {subprocess.py:106} INFO -   6. DB::QueryAnalyzer::resolveFunction(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&) @ 0x000000001ad1f47d
+[2026-04-13T07:16:30.083+0000] {subprocess.py:106} INFO -   7. DB::QueryAnalyzer::resolveExpressionNode(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool, bool) @ 0x000000001aa616e5
+[2026-04-13T07:16:30.084+0000] {subprocess.py:106} INFO -   8. DB::QueryAnalyzer::resolveExpressionNodeList(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&, bool, bool) @ 0x000000001aa60b81
+[2026-04-13T07:16:30.084+0000] {subprocess.py:106} INFO -   9. DB::QueryAnalyzer::resolveProjectionExpressionNodeList(std::shared_ptr<DB::IQueryTreeNode>&, DB::IdentifierResolveScope&) @ 0x000000001aa890b2
+[2026-04-13T07:16:30.085+0000] {subprocess.py:106} INFO -   10. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001aa57378
+[2026-04-13T07:16:30.086+0000] {subprocess.py:106} INFO -   11. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001aa54ae4
+[2026-04-13T07:16:30.087+0000] {subprocess.py:106} INFO -   12. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001aa5409c
+[2026-04-13T07:16:30.087+0000] {subprocess.py:106} INFO -   13. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aaaeac1
+[2026-04-13T07:16:30.088+0000] {subprocess.py:106} INFO -   14. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001b68d464
+[2026-04-13T07:16:30.089+0000] {subprocess.py:106} INFO -   15. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001b68b90c
+[2026-04-13T07:16:30.090+0000] {subprocess.py:106} INFO -   16. DB::InterpreterSelectQueryAnalyzer::getSampleBlock(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&) @ 0x000000001b68dfad
+[2026-04-13T07:16:30.091+0000] {subprocess.py:106} INFO -   17. DB::InterpreterCreateQuery::getTablePropertiesAndNormalizeCreateQuery(DB::ASTCreateQuery&, DB::LoadingStrictnessLevel) @ 0x000000001b5e722f
+[2026-04-13T07:16:30.091+0000] {subprocess.py:106} INFO -   18. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x000000001b5ef6bb
+[2026-04-13T07:16:30.092+0000] {subprocess.py:106} INFO -   19. DB::InterpreterCreateQuery::execute() @ 0x000000001b607158
+[2026-04-13T07:16:30.092+0000] {subprocess.py:106} INFO -   20. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8f03e
+[2026-04-13T07:16:30.093+0000] {subprocess.py:106} INFO -   21. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+[2026-04-13T07:16:30.094+0000] {subprocess.py:106} INFO -   22. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+[2026-04-13T07:16:30.094+0000] {subprocess.py:106} INFO -   23. DB::TCPHandler::run() @ 0x000000001d23cb24
+[2026-04-13T07:16:30.095+0000] {subprocess.py:106} INFO -   24. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+[2026-04-13T07:16:30.096+0000] {subprocess.py:106} INFO -   25. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+[2026-04-13T07:16:30.097+0000] {subprocess.py:106} INFO -   26. Poco::PooledThread::run() @ 0x0000000022748345
+[2026-04-13T07:16:30.098+0000] {subprocess.py:106} INFO -   27. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+[2026-04-13T07:16:30.098+0000] {subprocess.py:106} INFO -   28. ? @ 0x0000000000094ac3
+[2026-04-13T07:16:30.099+0000] {subprocess.py:106} INFO -   29. __clone @ 0x0000000000125a84
+[2026-04-13T07:16:30.099+0000] {subprocess.py:106} INFO - [0m07:16:30
+[2026-04-13T07:16:30.100+0000] {subprocess.py:106} INFO - [0m07:16:30  Done. PASS=12 WARN=0 ERROR=1 SKIP=0 TOTAL=13
+[2026-04-13T07:16:31.358+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2026-04-13T07:16:31.378+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-13T07:16:31.384+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=layers_update, task_id=run_dbt, run_id=manual__2026-04-13T07:16:19.688634+00:00, execution_date=20260413T071619, start_date=20260413T071620, end_date=20260413T071631
+[2026-04-13T07:16:31.434+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-13T07:16:31.436+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 5 for task run_dbt (Bash command failed. The command returned a non-zero exit code 1.; 65)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-13T07:16:31.483+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-13T07:16:31.502+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-13T07:16:31.506+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

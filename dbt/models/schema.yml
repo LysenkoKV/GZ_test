@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: dds_browser
+    description: "Тест browser"
+    columns:
+      - name: click_id
+        description: "Click GUID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dds_fct_click')
+              field: click_id
+      - name: event_id
+        description: "Event GUID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dds_fct_click')
+              field: event_id
+
+  - name: dds_geo
+    description: "Тест geo"
+    columns:
+      - name: click_id
+        description: "Click GUID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dds_fct_click')
+              field: click_id
+      - name: geo_latitude
+        description: "MinMax Широта"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -90
+              max_value: 90
+      - name: geo_longitude
+        description: "MinMax Долгота"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -180
+              max_value: 180
+
+  - name: dds_location
+    description: "Тест location"
+    columns:
+      - name: event_id
+        description: "Event GUID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dds_fct_click')
+              field: event_id
+
+  - name: dds_device
+    description: "Тест location"
+    columns:
+      - name: click_id
+        description: "Click GUID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dds_fct_click')
+              field: click_id
+      - name: device_is_mobile
+        description: "Is mobile?"
+        tests:
+          - accepted_values:
+              values: [true, false]
+      - name: device_type
+        description: "Device type"
+        tests:
+          - accepted_values:
+              values: ['Mobile', 'Computer']
+      - name: user_custom_id
+        description: "Корректность email"
+        tests:
+         - email_test

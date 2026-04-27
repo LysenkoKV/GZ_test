@@ -1,0 +1,122 @@
+[2026-04-09T06:09:50.601+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T06:09:50.628+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [queued]>
+[2026-04-09T06:09:50.641+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [queued]>
+[2026-04-09T06:09:50.642+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T06:09:50.660+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): execute_tests_run> on 2026-04-07 18:30:00+00:00
+[2026-04-09T06:09:50.667+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=59) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T06:09:50.670+0000] {standard_task_runner.py:72} INFO - Started process 60 to run task
+[2026-04-09T06:09:50.670+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'execute_tests_run', 'scheduled__2026-04-07T18:30:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpyigudp3w']
+[2026-04-09T06:09:50.672+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask execute_tests_run
+[2026-04-09T06:09:50.737+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [running]> on host 04d8aaa2cd66
+[2026-04-09T06:09:50.854+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='execute_tests_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-07T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-07T18:30:00+00:00'
+[2026-04-09T06:09:50.855+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T06:09:50.905+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/trigger_dagrun.py", line 206, in execute
+    dag_run = trigger_dag(
+              ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api/common/trigger_dag.py", line 133, in trigger_dag
+    raise DagNotFound(f"Dag id {dag_id} not found in DagModel")
+airflow.exceptions.DagNotFound: Dag id tests_run not found in DagModel
+[2026-04-09T06:09:50.916+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=kafka_producer, task_id=execute_tests_run, run_id=scheduled__2026-04-07T18:30:00+00:00, execution_date=20260407T183000, start_date=20260409T060950, end_date=20260409T060950
+[2026-04-09T06:09:50.953+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T06:09:50.954+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 10 for task execute_tests_run (Dag id tests_run not found in DagModel; 60)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/trigger_dagrun.py", line 206, in execute
+    dag_run = trigger_dag(
+              ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api/common/trigger_dag.py", line 133, in trigger_dag
+    raise DagNotFound(f"Dag id {dag_id} not found in DagModel")
+airflow.exceptions.DagNotFound: Dag id tests_run not found in DagModel
+[2026-04-09T06:09:51.007+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-09T06:09:51.026+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T06:09:51.031+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-04-09T06:40:30.954+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T06:40:30.982+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [queued]>
+[2026-04-09T06:40:30.992+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [queued]>
+[2026-04-09T06:40:30.993+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T06:40:31.014+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): execute_tests_run> on 2026-04-07 18:30:00+00:00
+[2026-04-09T06:40:31.022+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=93) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T06:40:31.025+0000] {standard_task_runner.py:72} INFO - Started process 94 to run task
+[2026-04-09T06:40:31.026+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'execute_tests_run', 'scheduled__2026-04-07T18:30:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpg9mr3exp']
+[2026-04-09T06:40:31.028+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask execute_tests_run
+[2026-04-09T06:40:31.112+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.execute_tests_run scheduled__2026-04-07T18:30:00+00:00 [running]> on host 04d8aaa2cd66
+[2026-04-09T06:40:31.220+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='execute_tests_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-07T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-07T18:30:00+00:00'
+[2026-04-09T06:40:31.221+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T06:40:31.338+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T06:40:31.339+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=execute_tests_run, run_id=scheduled__2026-04-07T18:30:00+00:00, execution_date=20260407T183000, start_date=20260409T064030, end_date=20260409T064031
+[2026-04-09T06:40:31.405+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-09T06:40:31.426+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T06:40:31.428+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

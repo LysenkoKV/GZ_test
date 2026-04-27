@@ -1,0 +1,259 @@
+[2026-04-09T15:15:01.480+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T15:15:01.503+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: layers_update.layers_update manual__2026-04-09T15:14:58.379886+00:00 [queued]>
+[2026-04-09T15:15:01.513+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: layers_update.layers_update manual__2026-04-09T15:14:58.379886+00:00 [queued]>
+[2026-04-09T15:15:01.514+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T15:15:01.538+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): layers_update> on 2026-04-09 15:14:58.379886+00:00
+[2026-04-09T15:15:01.546+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=114) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T15:15:01.550+0000] {standard_task_runner.py:72} INFO - Started process 115 to run task
+[2026-04-09T15:15:01.550+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'layers_update', 'layers_update', 'manual__2026-04-09T15:14:58.379886+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/layers_update.py', '--cfg-path', '/tmp/tmpuf3pl44h']
+[2026-04-09T15:15:01.553+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask layers_update
+[2026-04-09T15:15:01.627+0000] {task_command.py:467} INFO - Running <TaskInstance: layers_update.layers_update manual__2026-04-09T15:14:58.379886+00:00 [running]> on host 2d41fd9e80ad
+[2026-04-09T15:15:01.720+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='layers_update' AIRFLOW_CTX_TASK_ID='layers_update' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T15:14:58.379886+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T15:14:58.379886+00:00'
+[2026-04-09T15:15:01.721+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T15:15:10.300+0000] {logging_mixin.py:190} INFO - 15:15:04  Running with dbt=1.7.0
+15:15:05  Registered adapter: clickhouse=1.7.0
+15:15:06  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.clickhouse_etl.raw
+15:15:06  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+15:15:06  
+15:15:07  Concurrency: 1 threads (target='dev')
+15:15:07  
+15:15:07  1 of 12 START sql incremental model `ods_ods`.`browser_data` ................... [RUN]
+15:15:07  1 of 12 OK created sql incremental model `ods_ods`.`browser_data` .............. [OK in 0.20s]
+15:15:07  2 of 12 START sql incremental model `ods_ods`.`device_data` .................... [RUN]
+15:15:07  2 of 12 OK created sql incremental model `ods_ods`.`device_data` ............... [OK in 0.11s]
+15:15:07  3 of 12 START sql incremental model `ods_ods`.`geo_data` ....................... [RUN]
+15:15:07  3 of 12 OK created sql incremental model `ods_ods`.`geo_data` .................. [OK in 0.12s]
+15:15:07  4 of 12 START sql incremental model `ods_ods`.`location_data` .................. [RUN]
+15:15:07  4 of 12 OK created sql incremental model `ods_ods`.`location_data` ............. [OK in 0.15s]
+15:15:07  5 of 12 START sql incremental model `ods_dds`.`dim_browser` .................... [RUN]
+15:15:07  5 of 12 ERROR creating sql incremental model `ods_dds`.`dim_browser` ........... [ERROR in 0.07s]
+15:15:07  6 of 12 START sql incremental model `ods_dds`.`dim_device` ..................... [RUN]
+15:15:07  6 of 12 ERROR creating sql incremental model `ods_dds`.`dim_device` ............ [ERROR in 0.05s]
+15:15:07  7 of 12 START sql incremental model `ods_dds`.`fct_click` ...................... [RUN]
+15:15:08  7 of 12 OK created sql incremental model `ods_dds`.`fct_click` ................. [OK in 0.16s]
+15:15:08  8 of 12 START sql incremental model `ods_dds`.`dim_geo` ........................ [RUN]
+15:15:08  8 of 12 ERROR creating sql incremental model `ods_dds`.`dim_geo` ............... [ERROR in 0.08s]
+15:15:08  9 of 12 START sql incremental model `ods_dds`.`dim_location` ................... [RUN]
+15:15:08  9 of 12 ERROR creating sql incremental model `ods_dds`.`dim_location` .......... [ERROR in 0.10s]
+15:15:08  10 of 12 SKIP relation ods_dm.dm_geo_stat ...................................... [SKIP]
+15:15:08  11 of 12 SKIP relation ods_dm.dm_daily_aggregates .............................. [SKIP]
+15:15:08  12 of 12 SKIP relation ods_dm.dm_popular_sources ............................... [SKIP]
+15:15:08  
+15:15:08  Finished running 10 incremental models, 2 view models in 0 hours 0 minutes and 1.50 seconds (1.50s).
+15:15:08  
+15:15:08  Completed with 4 errors and 0 warnings:
+15:15:08  
+15:15:08    Database Error in model dds_browser (models/dds/dds_browser.sql)
+  Code: 184.
+  DB::Exception: Aggregate function MAX(load_time) AS load_time is found inside another aggregate function in query. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+  3. DB::Exception::Exception<String, String&>(int, FormatStringHelperImpl<std::type_identity<String>::type, std::type_identity<String&>::type>, String&&, String&) @ 0x00000000104c9bb6
+  4. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7892
+  5. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7810
+  6. DB::validateAggregates(std::shared_ptr<DB::IQueryTreeNode> const&, DB::AggregatesValidationParams) @ 0x000000001aaa23db
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001aa5a580
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001aa54ae4
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001aa5409c
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aaaeac1
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001b68d464
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001b68b90c
+  13. DB::InterpreterInsertQuery::execute() @ 0x000000001b644d08
+  14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8f03e
+  15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+  16. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+  17. DB::TCPHandler::run() @ 0x000000001d23cb24
+  18. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+  19. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+  20. Poco::PooledThread::run() @ 0x0000000022748345
+  21. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+  22. ? @ 0x0000000000094ac3
+  23. __clone @ 0x0000000000125a84
+  compiled Code at target/run/clickhouse_etl/models/dds/dds_browser.sql
+15:15:08  
+15:15:08    Database Error in model dds_device (models/dds/dds_device.sql)
+  Code: 184.
+  DB::Exception: Aggregate function MAX(load_time) AS load_time is found inside another aggregate function in query. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+  3. DB::Exception::Exception<String, String&>(int, FormatStringHelperImpl<std::type_identity<String>::type, std::type_identity<String&>::type>, String&&, String&) @ 0x00000000104c9bb6
+  4. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7892
+  5. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7810
+  6. DB::validateAggregates(std::shared_ptr<DB::IQueryTreeNode> const&, DB::AggregatesValidationParams) @ 0x000000001aaa23db
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001aa5a580
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001aa54ae4
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001aa5409c
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aaaeac1
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001b68d464
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001b68b90c
+  13. DB::InterpreterInsertQuery::execute() @ 0x000000001b644d08
+  14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8f03e
+  15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+  16. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+  17. DB::TCPHandler::run() @ 0x000000001d23cb24
+  18. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+  19. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+  20. Poco::PooledThread::run() @ 0x0000000022748345
+  21. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+  22. ? @ 0x0000000000094ac3
+  23. __clone @ 0x0000000000125a84
+  compiled Code at target/run/clickhouse_etl/models/dds/dds_device.sql
+15:15:08  
+15:15:08    Database Error in model dds_geo (models/dds/dds_geo.sql)
+  Code: 184.
+  DB::Exception: Aggregate function MAX(load_time) AS load_time is found inside another aggregate function in query. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+  3. DB::Exception::Exception<String, String&>(int, FormatStringHelperImpl<std::type_identity<String>::type, std::type_identity<String&>::type>, String&&, String&) @ 0x00000000104c9bb6
+  4. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7892
+  5. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7810
+  6. DB::validateAggregates(std::shared_ptr<DB::IQueryTreeNode> const&, DB::AggregatesValidationParams) @ 0x000000001aaa23db
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001aa5a580
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001aa54ae4
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001aa5409c
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aaaeac1
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001b68d464
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001b68b90c
+  13. DB::InterpreterInsertQuery::execute() @ 0x000000001b644d08
+  14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8f03e
+  15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+  16. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+  17. DB::TCPHandler::run() @ 0x000000001d23cb24
+  18. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+  19. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+  20. Poco::PooledThread::run() @ 0x0000000022748345
+  21. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+  22. ? @ 0x0000000000094ac3
+  23. __clone @ 0x0000000000125a84
+  compiled Code at target/run/clickhouse_etl/models/dds/dds_geo.sql
+15:15:08  
+15:15:08    Database Error in model dds_location (models/dds/dds_location.sql)
+  Code: 184.
+  DB::Exception: Aggregate function MAX(load_time) AS load_time is found inside another aggregate function in query. Stack trace:
+  
+  0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+  1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+  2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+  3. DB::Exception::Exception<String, String&>(int, FormatStringHelperImpl<std::type_identity<String>::type, std::type_identity<String&>::type>, String&&, String&) @ 0x00000000104c9bb6
+  4. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7892
+  5. DB::InDepthQueryTreeVisitor<DB::(anonymous namespace)::CollectAggregateFunctionNodesVisitor, true>::visit(std::shared_ptr<DB::IQueryTreeNode> const&) (.llvm.9502898475871646207) @ 0x000000001aaa7810
+  6. DB::validateAggregates(std::shared_ptr<DB::IQueryTreeNode> const&, DB::AggregatesValidationParams) @ 0x000000001aaa23db
+  7. DB::QueryAnalyzer::resolveQuery(std::shared_ptr<DB::IQueryTreeNode> const&, DB::IdentifierResolveScope&) @ 0x000000001aa5a580
+  8. DB::QueryAnalyzer::resolve(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::IQueryTreeNode> const&, std::shared_ptr<DB::Context const>) @ 0x000000001aa54ae4
+  9. DB::QueryAnalysisPass::run(std::shared_ptr<DB::IQueryTreeNode>&, std::shared_ptr<DB::Context const>) @ 0x000000001aa5409c
+  10. DB::QueryTreePassManager::run(std::shared_ptr<DB::IQueryTreeNode>&) @ 0x000000001aaaeac1
+  11. DB::buildQueryTreeAndRunPasses(boost::intrusive_ptr<DB::IAST> const&, DB::SelectQueryOptions const&, std::shared_ptr<DB::Context const> const&, std::shared_ptr<DB::IStorage> const&) @ 0x000000001b68d464
+  12. DB::InterpreterSelectQueryAnalyzer::InterpreterSelectQueryAnalyzer(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&, DB::SelectQueryOptions const&, std::vector<String, std::allocator<String>> const&, DB::ActionsDAG const*) @ 0x000000001b68b90c
+  13. DB::InterpreterInsertQuery::execute() @ 0x000000001b644d08
+  14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8f03e
+  15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+  16. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+  17. DB::TCPHandler::run() @ 0x000000001d23cb24
+  18. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+  19. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+  20. Poco::PooledThread::run() @ 0x0000000022748345
+  21. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+  22. ? @ 0x0000000000094ac3
+  23. __clone @ 0x0000000000125a84
+  compiled Code at target/run/clickhouse_etl/models/dds/dds_location.sql
+15:15:08  
+15:15:08  Done. PASS=5 WARN=0 ERROR=4 SKIP=3 TOTAL=12
+[2026-04-09T15:15:10.301+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/layers_update.py", line 21, in update
+    raise Exception(f"Запуск моделей завершился с ошибками, проверьте логи, {result.stderr}")
+Exception: Запуск моделей завершился с ошибками, проверьте логи, 
+[2026-04-09T15:15:10.315+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=layers_update, task_id=layers_update, run_id=manual__2026-04-09T15:14:58.379886+00:00, execution_date=20260409T151458, start_date=20260409T151501, end_date=20260409T151510
+[2026-04-09T15:15:10.352+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T15:15:10.353+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 61 for task layers_update (Запуск моделей завершился с ошибками, проверьте логи, ; 115)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/layers_update.py", line 21, in update
+    raise Exception(f"Запуск моделей завершился с ошибками, проверьте логи, {result.stderr}")
+Exception: Запуск моделей завершился с ошибками, проверьте логи, 
+[2026-04-09T15:15:10.400+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-09T15:15:10.428+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:15:10.434+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

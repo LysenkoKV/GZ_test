@@ -1,0 +1,169 @@
+[2026-04-12T15:57:32.743+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-12T15:57:32.784+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tests_run.run_dbt_tests manual__2026-04-12T15:57:31.342552+00:00 [queued]>
+[2026-04-12T15:57:32.813+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tests_run.run_dbt_tests manual__2026-04-12T15:57:31.342552+00:00 [queued]>
+[2026-04-12T15:57:32.818+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-12T15:57:32.852+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_tests> on 2026-04-12 15:57:31.342552+00:00
+[2026-04-12T15:57:32.861+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=106) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-12T15:57:32.869+0000] {standard_task_runner.py:72} INFO - Started process 107 to run task
+[2026-04-12T15:57:32.876+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tests_run', 'run_dbt_tests', 'manual__2026-04-12T15:57:31.342552+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/tests_run.py', '--cfg-path', '/tmp/tmpb9qtfal_']
+[2026-04-12T15:57:32.877+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask run_dbt_tests
+[2026-04-12T15:57:32.962+0000] {task_command.py:467} INFO - Running <TaskInstance: tests_run.run_dbt_tests manual__2026-04-12T15:57:31.342552+00:00 [running]> on host 5fbfe133d589
+[2026-04-12T15:57:33.080+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tests_run' AIRFLOW_CTX_TASK_ID='run_dbt_tests' AIRFLOW_CTX_EXECUTION_DATE='2026-04-12T15:57:31.342552+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-12T15:57:31.342552+00:00'
+[2026-04-12T15:57:33.081+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-12T15:57:33.100+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-04-12T15:57:33.101+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt test']
+[2026-04-12T15:57:33.114+0000] {subprocess.py:99} INFO - Output:
+[2026-04-12T15:57:36.900+0000] {subprocess.py:106} INFO - [0m15:57:36  Running with dbt=1.7.0
+[2026-04-12T15:57:37.258+0000] {subprocess.py:106} INFO - [0m15:57:37  Registered adapter: clickhouse=1.7.0
+[2026-04-12T15:57:38.602+0000] {subprocess.py:106} INFO - [0m15:57:38  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-12T15:57:38.602+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-04-12T15:57:38.603+0000] {subprocess.py:106} INFO - - models.clickhouse_etl.raw
+[2026-04-12T15:57:38.637+0000] {subprocess.py:106} INFO - [0m15:57:38  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+[2026-04-12T15:57:38.642+0000] {subprocess.py:106} INFO - [0m15:57:38
+[2026-04-12T15:57:39.065+0000] {subprocess.py:106} INFO - [0m15:57:39  Concurrency: 1 threads (target='dev')
+[2026-04-12T15:57:39.067+0000] {subprocess.py:106} INFO - [0m15:57:39
+[2026-04-12T15:57:39.079+0000] {subprocess.py:106} INFO - [0m15:57:39  1 of 20 START test accepted_values_dds_device_device_is_mobile__True__False .... [RUN]
+[2026-04-12T15:57:39.155+0000] {subprocess.py:106} INFO - [0m15:57:39  1 of 20 PASS accepted_values_dds_device_device_is_mobile__True__False .......... [[32mPASS[0m in 0.07s]
+[2026-04-12T15:57:39.159+0000] {subprocess.py:106} INFO - [0m15:57:39  2 of 20 START test accepted_values_dds_device_device_type__Mobile__Computer .... [RUN]
+[2026-04-12T15:57:39.209+0000] {subprocess.py:106} INFO - [0m15:57:39  2 of 20 PASS accepted_values_dds_device_device_type__Mobile__Computer .......... [[32mPASS[0m in 0.05s]
+[2026-04-12T15:57:39.213+0000] {subprocess.py:106} INFO - [0m15:57:39  3 of 20 START test dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ...... [RUN]
+[2026-04-12T15:57:39.268+0000] {subprocess.py:106} INFO - [0m15:57:39  3 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ............ [[32mPASS[0m in 0.05s]
+[2026-04-12T15:57:39.271+0000] {subprocess.py:106} INFO - [0m15:57:39  4 of 20 START test dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ... [RUN]
+[2026-04-12T15:57:39.356+0000] {subprocess.py:106} INFO - [0m15:57:39  4 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ......... [[32mPASS[0m in 0.08s]
+[2026-04-12T15:57:39.359+0000] {subprocess.py:106} INFO - [0m15:57:39  5 of 20 START test dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [RUN]
+[2026-04-12T15:57:39.416+0000] {subprocess.py:106} INFO - [0m15:57:39  5 of 20 FAIL 99 dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [[31mFAIL 99[0m in 0.06s]
+[2026-04-12T15:57:39.419+0000] {subprocess.py:106} INFO - [0m15:57:39  6 of 20 START test email_test_dds_device_user_custom_id ........................ [RUN]
+[2026-04-12T15:57:39.462+0000] {subprocess.py:106} INFO - [0m15:57:39  6 of 20 PASS email_test_dds_device_user_custom_id .............................. [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.465+0000] {subprocess.py:106} INFO - [0m15:57:39  7 of 20 START test not_null_dds_browser_click_id ............................... [RUN]
+[2026-04-12T15:57:39.507+0000] {subprocess.py:106} INFO - [0m15:57:39  7 of 20 PASS not_null_dds_browser_click_id ..................................... [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.510+0000] {subprocess.py:106} INFO - [0m15:57:39  8 of 20 START test not_null_dds_browser_event_id ............................... [RUN]
+[2026-04-12T15:57:39.553+0000] {subprocess.py:106} INFO - [0m15:57:39  8 of 20 PASS not_null_dds_browser_event_id ..................................... [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.556+0000] {subprocess.py:106} INFO - [0m15:57:39  9 of 20 START test not_null_dds_device_click_id ................................ [RUN]
+[2026-04-12T15:57:39.598+0000] {subprocess.py:106} INFO - [0m15:57:39  9 of 20 PASS not_null_dds_device_click_id ...................................... [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.601+0000] {subprocess.py:106} INFO - [0m15:57:39  10 of 20 START test not_null_dds_geo_click_id .................................. [RUN]
+[2026-04-12T15:57:39.645+0000] {subprocess.py:106} INFO - [0m15:57:39  10 of 20 PASS not_null_dds_geo_click_id ........................................ [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.649+0000] {subprocess.py:106} INFO - [0m15:57:39  11 of 20 START test not_null_dds_location_event_id ............................. [RUN]
+[2026-04-12T15:57:39.699+0000] {subprocess.py:106} INFO - [0m15:57:39  11 of 20 PASS not_null_dds_location_event_id ................................... [[32mPASS[0m in 0.05s]
+[2026-04-12T15:57:39.703+0000] {subprocess.py:106} INFO - [0m15:57:39  12 of 20 START test relationships_dds_browser_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-12T15:57:39.752+0000] {subprocess.py:106} INFO - [0m15:57:39  12 of 20 PASS relationships_dds_browser_click_id__click_id__ref_dds_fct_click_ . [[32mPASS[0m in 0.05s]
+[2026-04-12T15:57:39.755+0000] {subprocess.py:106} INFO - [0m15:57:39  13 of 20 START test relationships_dds_browser_event_id__event_id__ref_dds_fct_click_  [RUN]
+[2026-04-12T15:57:39.802+0000] {subprocess.py:106} INFO - [0m15:57:39  13 of 20 PASS relationships_dds_browser_event_id__event_id__ref_dds_fct_click_ . [[32mPASS[0m in 0.05s]
+[2026-04-12T15:57:39.806+0000] {subprocess.py:106} INFO - [0m15:57:39  14 of 20 START test relationships_dds_device_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-12T15:57:39.852+0000] {subprocess.py:106} INFO - [0m15:57:39  14 of 20 PASS relationships_dds_device_click_id__click_id__ref_dds_fct_click_ .. [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.855+0000] {subprocess.py:106} INFO - [0m15:57:39  15 of 20 START test relationships_dds_geo_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-12T15:57:39.895+0000] {subprocess.py:106} INFO - [0m15:57:39  15 of 20 PASS relationships_dds_geo_click_id__click_id__ref_dds_fct_click_ ..... [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.898+0000] {subprocess.py:106} INFO - [0m15:57:39  16 of 20 START test relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [RUN]
+[2026-04-12T15:57:39.939+0000] {subprocess.py:106} INFO - [0m15:57:39  16 of 20 PASS relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [[32mPASS[0m in 0.04s]
+[2026-04-12T15:57:39.942+0000] {subprocess.py:106} INFO - [0m15:57:39  17 of 20 START test unique_dds_browser_event_id ................................ [RUN]
+[2026-04-12T15:57:39.981+0000] {subprocess.py:106} INFO - [0m15:57:39  17 of 20 FAIL 1000 unique_dds_browser_event_id ................................. [[31mFAIL 1000[0m in 0.04s]
+[2026-04-12T15:57:39.984+0000] {subprocess.py:106} INFO - [0m15:57:39  18 of 20 START test unique_dds_device_click_id ................................. [RUN]
+[2026-04-12T15:57:40.020+0000] {subprocess.py:106} INFO - [0m15:57:40  18 of 20 FAIL 99 unique_dds_device_click_id .................................... [[31mFAIL 99[0m in 0.03s]
+[2026-04-12T15:57:40.023+0000] {subprocess.py:106} INFO - [0m15:57:40  19 of 20 START test unique_dds_geo_click_id .................................... [RUN]
+[2026-04-12T15:57:40.059+0000] {subprocess.py:106} INFO - [0m15:57:40  19 of 20 FAIL 99 unique_dds_geo_click_id ....................................... [[31mFAIL 99[0m in 0.03s]
+[2026-04-12T15:57:40.062+0000] {subprocess.py:106} INFO - [0m15:57:40  20 of 20 START test unique_dds_location_event_id ............................... [RUN]
+[2026-04-12T15:57:40.159+0000] {subprocess.py:106} INFO - [0m15:57:40  20 of 20 FAIL 1000 unique_dds_location_event_id ................................ [[31mFAIL 1000[0m in 0.10s]
+[2026-04-12T15:57:40.167+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.167+0000] {subprocess.py:106} INFO - [0m15:57:40  Finished running 20 tests in 0 hours 0 minutes and 1.52 seconds (1.52s).
+[2026-04-12T15:57:40.208+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.209+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mCompleted with 5 errors and 0 warnings:[0m
+[2026-04-12T15:57:40.210+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.211+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mFailure in test dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id (models/schema.yml)[0m
+[2026-04-12T15:57:40.212+0000] {subprocess.py:106} INFO - [0m15:57:40    Got 99 results, configured to fail if != 0
+[2026-04-12T15:57:40.213+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.214+0000] {subprocess.py:106} INFO - [0m15:57:40    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/dbt_utils_unique_combination_o_1a7325247be798d2d6c9844d9ad8d43a.sql
+[2026-04-12T15:57:40.215+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.216+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mFailure in test unique_dds_browser_event_id (models/schema.yml)[0m
+[2026-04-12T15:57:40.217+0000] {subprocess.py:106} INFO - [0m15:57:40    Got 1000 results, configured to fail if != 0
+[2026-04-12T15:57:40.218+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.224+0000] {subprocess.py:106} INFO - [0m15:57:40    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_browser_event_id.sql
+[2026-04-12T15:57:40.224+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.227+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mFailure in test unique_dds_device_click_id (models/schema.yml)[0m
+[2026-04-12T15:57:40.228+0000] {subprocess.py:106} INFO - [0m15:57:40    Got 99 results, configured to fail if != 0
+[2026-04-12T15:57:40.229+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.230+0000] {subprocess.py:106} INFO - [0m15:57:40    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_device_click_id.sql
+[2026-04-12T15:57:40.232+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.233+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mFailure in test unique_dds_geo_click_id (models/schema.yml)[0m
+[2026-04-12T15:57:40.234+0000] {subprocess.py:106} INFO - [0m15:57:40    Got 99 results, configured to fail if != 0
+[2026-04-12T15:57:40.236+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.238+0000] {subprocess.py:106} INFO - [0m15:57:40    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_geo_click_id.sql
+[2026-04-12T15:57:40.239+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.240+0000] {subprocess.py:106} INFO - [0m15:57:40  [31mFailure in test unique_dds_location_event_id (models/schema.yml)[0m
+[2026-04-12T15:57:40.241+0000] {subprocess.py:106} INFO - [0m15:57:40    Got 1000 results, configured to fail if != 0
+[2026-04-12T15:57:40.242+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.243+0000] {subprocess.py:106} INFO - [0m15:57:40    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_location_event_id.sql
+[2026-04-12T15:57:40.244+0000] {subprocess.py:106} INFO - [0m15:57:40
+[2026-04-12T15:57:40.245+0000] {subprocess.py:106} INFO - [0m15:57:40  Done. PASS=15 WARN=0 ERROR=5 SKIP=0 TOTAL=20
+[2026-04-12T15:57:41.199+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2026-04-12T15:57:41.217+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-12T15:57:41.223+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=tests_run, task_id=run_dbt_tests, run_id=manual__2026-04-12T15:57:31.342552+00:00, execution_date=20260412T155731, start_date=20260412T155732, end_date=20260412T155741
+[2026-04-12T15:57:41.302+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-12T15:57:41.306+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 11 for task run_dbt_tests (Bash command failed. The command returned a non-zero exit code 1.; 107)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-12T15:57:41.343+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-12T15:57:41.374+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-12T15:57:41.381+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,18 @@
+[2026-04-21T08:21:36.218+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-21T08:21:36.245+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.execute_update_layers manual__2026-04-21T08:21:33.715270+00:00 [queued]>
+[2026-04-21T08:21:36.258+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.execute_update_layers manual__2026-04-21T08:21:33.715270+00:00 [queued]>
+[2026-04-21T08:21:36.259+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-21T08:21:36.279+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): execute_update_layers> on 2026-04-21 08:21:33.715270+00:00
+[2026-04-21T08:21:36.286+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=411) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-21T08:21:36.289+0000] {standard_task_runner.py:72} INFO - Started process 412 to run task
+[2026-04-21T08:21:36.291+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'execute_update_layers', 'manual__2026-04-21T08:21:33.715270+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmp2eleg0iu']
+[2026-04-21T08:21:36.295+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask execute_update_layers
+[2026-04-21T08:21:36.413+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.execute_update_layers manual__2026-04-21T08:21:33.715270+00:00 [running]> on host 685b945180b2
+[2026-04-21T08:21:36.569+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='execute_update_layers' AIRFLOW_CTX_EXECUTION_DATE='2026-04-21T08:21:33.715270+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-21T08:21:33.715270+00:00'
+[2026-04-21T08:21:36.570+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-21T08:21:38.205+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-21T08:21:38.206+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=execute_update_layers, run_id=manual__2026-04-21T08:21:33.715270+00:00, execution_date=20260421T082133, start_date=20260421T082136, end_date=20260421T082138
+[2026-04-21T08:21:38.280+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-21T08:21:38.293+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

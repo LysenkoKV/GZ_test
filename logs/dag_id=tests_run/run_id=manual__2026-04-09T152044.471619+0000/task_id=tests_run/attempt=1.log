@@ -1,0 +1,183 @@
+[2026-04-09T15:20:48.249+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T15:20:48.276+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tests_run.tests_run manual__2026-04-09T15:20:44.471619+00:00 [queued]>
+[2026-04-09T15:20:48.290+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tests_run.tests_run manual__2026-04-09T15:20:44.471619+00:00 [queued]>
+[2026-04-09T15:20:48.291+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T15:20:48.311+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): tests_run> on 2026-04-09 15:20:44.471619+00:00
+[2026-04-09T15:20:48.325+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=201) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T15:20:48.327+0000] {standard_task_runner.py:72} INFO - Started process 202 to run task
+[2026-04-09T15:20:48.324+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tests_run', 'tests_run', 'manual__2026-04-09T15:20:44.471619+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/tests_run.py', '--cfg-path', '/tmp/tmponxj6ivq']
+[2026-04-09T15:20:48.329+0000] {standard_task_runner.py:105} INFO - Job 72: Subtask tests_run
+[2026-04-09T15:20:48.404+0000] {task_command.py:467} INFO - Running <TaskInstance: tests_run.tests_run manual__2026-04-09T15:20:44.471619+00:00 [running]> on host 2d41fd9e80ad
+[2026-04-09T15:20:48.524+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tests_run' AIRFLOW_CTX_TASK_ID='tests_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T15:20:44.471619+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T15:20:44.471619+00:00'
+[2026-04-09T15:20:48.527+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T15:20:57.460+0000] {logging_mixin.py:190} INFO - 15:20:52  Running with dbt=1.7.0
+15:20:52  Registered adapter: clickhouse=1.7.0
+15:20:54  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.clickhouse_etl.raw
+15:20:54  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+15:20:54  
+15:20:54  Concurrency: 1 threads (target='dev')
+15:20:54  
+15:20:54  1 of 20 START test accepted_values_dds_device_device_is_mobile__True__False .... [RUN]
+15:20:54  1 of 20 PASS accepted_values_dds_device_device_is_mobile__True__False .......... [PASS in 0.24s]
+15:20:54  2 of 20 START test accepted_values_dds_device_device_type__Mobile__Computer .... [RUN]
+15:20:54  2 of 20 PASS accepted_values_dds_device_device_type__Mobile__Computer .......... [PASS in 0.05s]
+15:20:54  3 of 20 START test dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ...... [RUN]
+15:20:54  3 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ............ [PASS in 0.08s]
+15:20:54  4 of 20 START test dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ... [RUN]
+15:20:54  4 of 20 PASS dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ......... [PASS in 0.06s]
+15:20:54  5 of 20 START test dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [RUN]
+15:20:54  5 of 20 FAIL 99 dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id  [FAIL 99 in 0.06s]
+15:20:54  6 of 20 START test email_test_dds_device_user_custom_id ........................ [RUN]
+15:20:55  6 of 20 PASS email_test_dds_device_user_custom_id .............................. [PASS in 0.05s]
+15:20:55  7 of 20 START test not_null_dds_browser_click_id ............................... [RUN]
+15:20:55  7 of 20 PASS not_null_dds_browser_click_id ..................................... [PASS in 0.06s]
+15:20:55  8 of 20 START test not_null_dds_browser_event_id ............................... [RUN]
+15:20:55  8 of 20 PASS not_null_dds_browser_event_id ..................................... [PASS in 0.05s]
+15:20:55  9 of 20 START test not_null_dds_device_click_id ................................ [RUN]
+15:20:55  9 of 20 PASS not_null_dds_device_click_id ...................................... [PASS in 0.05s]
+15:20:55  10 of 20 START test not_null_dds_geo_click_id .................................. [RUN]
+15:20:55  10 of 20 PASS not_null_dds_geo_click_id ........................................ [PASS in 0.05s]
+15:20:55  11 of 20 START test not_null_dds_location_event_id ............................. [RUN]
+15:20:55  11 of 20 PASS not_null_dds_location_event_id ................................... [PASS in 0.05s]
+15:20:55  12 of 20 START test relationships_dds_browser_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:20:55  12 of 20 PASS relationships_dds_browser_click_id__click_id__ref_dds_fct_click_ . [PASS in 0.07s]
+15:20:55  13 of 20 START test relationships_dds_browser_event_id__event_id__ref_dds_fct_click_  [RUN]
+15:20:55  13 of 20 PASS relationships_dds_browser_event_id__event_id__ref_dds_fct_click_ . [PASS in 0.06s]
+15:20:55  14 of 20 START test relationships_dds_device_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:20:56  14 of 20 PASS relationships_dds_device_click_id__click_id__ref_dds_fct_click_ .. [PASS in 0.62s]
+15:20:56  15 of 20 START test relationships_dds_geo_click_id__click_id__ref_dds_fct_click_  [RUN]
+15:20:56  15 of 20 PASS relationships_dds_geo_click_id__click_id__ref_dds_fct_click_ ..... [PASS in 0.05s]
+15:20:56  16 of 20 START test relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [RUN]
+15:20:56  16 of 20 PASS relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [PASS in 0.05s]
+15:20:56  17 of 20 START test unique_dds_browser_event_id ................................ [RUN]
+15:20:56  17 of 20 FAIL 1000 unique_dds_browser_event_id ................................. [FAIL 1000 in 0.06s]
+15:20:56  18 of 20 START test unique_dds_device_click_id ................................. [RUN]
+15:20:56  18 of 20 FAIL 99 unique_dds_device_click_id .................................... [FAIL 99 in 0.05s]
+15:20:56  19 of 20 START test unique_dds_geo_click_id .................................... [RUN]
+15:20:56  19 of 20 FAIL 99 unique_dds_geo_click_id ....................................... [FAIL 99 in 0.04s]
+15:20:56  20 of 20 START test unique_dds_location_event_id ............................... [RUN]
+15:20:56  20 of 20 FAIL 1000 unique_dds_location_event_id ................................ [FAIL 1000 in 0.05s]
+15:20:56  
+15:20:56  Finished running 20 tests in 0 hours 0 minutes and 2.36 seconds (2.36s).
+15:20:56  
+15:20:56  Completed with 5 errors and 0 warnings:
+15:20:56  
+15:20:56  Failure in test dbt_utils_unique_combination_of_columns_dds_device_user_custom_id__user_domain_id (models/schema.yml)
+15:20:56    Got 99 results, configured to fail if != 0
+15:20:56  
+15:20:56    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/dbt_utils_unique_combination_o_1a7325247be798d2d6c9844d9ad8d43a.sql
+15:20:56  
+15:20:56  Failure in test unique_dds_browser_event_id (models/schema.yml)
+15:20:56    Got 1000 results, configured to fail if != 0
+15:20:56  
+15:20:56    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_browser_event_id.sql
+15:20:56  
+15:20:56  Failure in test unique_dds_device_click_id (models/schema.yml)
+15:20:56    Got 99 results, configured to fail if != 0
+15:20:56  
+15:20:56    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_device_click_id.sql
+15:20:56  
+15:20:56  Failure in test unique_dds_geo_click_id (models/schema.yml)
+15:20:56    Got 99 results, configured to fail if != 0
+15:20:56  
+15:20:56    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_geo_click_id.sql
+15:20:56  
+15:20:56  Failure in test unique_dds_location_event_id (models/schema.yml)
+15:20:56    Got 1000 results, configured to fail if != 0
+15:20:56  
+15:20:56    compiled Code at target/compiled/clickhouse_etl/models/schema.yml/unique_dds_location_event_id.sql
+15:20:56  
+15:20:56  Done. PASS=15 WARN=0 ERROR=5 SKIP=0 TOTAL=20
+[2026-04-09T15:20:57.461+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tests_run.py", line 20, in tests_run
+    raise Exception(f"Тесты завершены с ошибками, проверьте логи")
+Exception: Тесты завершены с ошибками, проверьте логи
+[2026-04-09T15:20:57.482+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=tests_run, task_id=tests_run, run_id=manual__2026-04-09T15:20:44.471619+00:00, execution_date=20260409T152044, start_date=20260409T152048, end_date=20260409T152057
+[2026-04-09T15:20:57.528+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T15:20:57.529+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 72 for task tests_run (Тесты завершены с ошибками, проверьте логи; 202)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tests_run.py", line 20, in tests_run
+    raise Exception(f"Тесты завершены с ошибками, проверьте логи")
+Exception: Тесты завершены с ошибками, проверьте логи
+[2026-04-09T15:20:57.582+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-09T15:20:57.606+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:20:57.611+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

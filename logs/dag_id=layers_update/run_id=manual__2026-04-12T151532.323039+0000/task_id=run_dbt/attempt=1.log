@@ -1,0 +1,208 @@
+[2026-04-12T15:15:39.418+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-12T15:15:39.438+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-12T15:15:32.323039+00:00 [queued]>
+[2026-04-12T15:15:39.448+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-12T15:15:32.323039+00:00 [queued]>
+[2026-04-12T15:15:39.448+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-12T15:15:39.469+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt> on 2026-04-12 15:15:32.323039+00:00
+[2026-04-12T15:15:39.479+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=58) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-12T15:15:39.481+0000] {standard_task_runner.py:72} INFO - Started process 59 to run task
+[2026-04-12T15:15:39.481+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'layers_update', 'run_dbt', 'manual__2026-04-12T15:15:32.323039+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/layers_update.py', '--cfg-path', '/tmp/tmp6j65wtut']
+[2026-04-12T15:15:39.482+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask run_dbt
+[2026-04-12T15:15:39.545+0000] {task_command.py:467} INFO - Running <TaskInstance: layers_update.run_dbt manual__2026-04-12T15:15:32.323039+00:00 [running]> on host 8976488fc480
+[2026-04-12T15:15:39.651+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='layers_update' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2026-04-12T15:15:32.323039+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-12T15:15:32.323039+00:00'
+[2026-04-12T15:15:39.652+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-12T15:15:39.672+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-04-12T15:15:39.673+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt run']
+[2026-04-12T15:15:39.685+0000] {subprocess.py:99} INFO - Output:
+[2026-04-12T15:15:43.946+0000] {subprocess.py:106} INFO - [0m15:15:43  Running with dbt=1.7.0
+[2026-04-12T15:15:44.386+0000] {subprocess.py:106} INFO - [0m15:15:44  Registered adapter: clickhouse=1.7.0
+[2026-04-12T15:15:45.909+0000] {subprocess.py:106} INFO - [0m15:15:45  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-12T15:15:45.910+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-04-12T15:15:45.910+0000] {subprocess.py:106} INFO - - models.clickhouse_etl.raw
+[2026-04-12T15:15:45.946+0000] {subprocess.py:106} INFO - [0m15:15:45  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+[2026-04-12T15:15:45.950+0000] {subprocess.py:106} INFO - [0m15:15:45
+[2026-04-12T15:15:46.545+0000] {subprocess.py:106} INFO - [0m15:15:46  Concurrency: 1 threads (target='dev')
+[2026-04-12T15:15:46.546+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.558+0000] {subprocess.py:106} INFO - [0m15:15:46  1 of 12 START sql incremental model `ods_ods`.`browser_data` ................... [RUN]
+[2026-04-12T15:15:46.670+0000] {subprocess.py:106} INFO - [0m15:15:46  1 of 12 ERROR creating sql incremental model `ods_ods`.`browser_data` .......... [[31mERROR[0m in 0.11s]
+[2026-04-12T15:15:46.679+0000] {subprocess.py:106} INFO - [0m15:15:46  2 of 12 START sql incremental model `ods_ods`.`device_data` .................... [RUN]
+[2026-04-12T15:15:46.715+0000] {subprocess.py:106} INFO - [0m15:15:46  2 of 12 ERROR creating sql incremental model `ods_ods`.`device_data` ........... [[31mERROR[0m in 0.03s]
+[2026-04-12T15:15:46.718+0000] {subprocess.py:106} INFO - [0m15:15:46  3 of 12 START sql incremental model `ods_ods`.`geo_data` ....................... [RUN]
+[2026-04-12T15:15:46.783+0000] {subprocess.py:106} INFO - [0m15:15:46  3 of 12 ERROR creating sql incremental model `ods_ods`.`geo_data` .............. [[31mERROR[0m in 0.06s]
+[2026-04-12T15:15:46.797+0000] {subprocess.py:106} INFO - [0m15:15:46  4 of 12 START sql incremental model `ods_ods`.`location_data` .................. [RUN]
+[2026-04-12T15:15:46.853+0000] {subprocess.py:106} INFO - [0m15:15:46  4 of 12 ERROR creating sql incremental model `ods_ods`.`location_data` ......... [[31mERROR[0m in 0.05s]
+[2026-04-12T15:15:46.857+0000] {subprocess.py:106} INFO - [0m15:15:46  5 of 12 SKIP relation ods_dds.dds_browser ...................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.861+0000] {subprocess.py:106} INFO - [0m15:15:46  6 of 12 SKIP relation ods_dds.dds_device ....................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.864+0000] {subprocess.py:106} INFO - [0m15:15:46  7 of 12 SKIP relation ods_dds.dds_fct_click .................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.866+0000] {subprocess.py:106} INFO - [0m15:15:46  8 of 12 SKIP relation ods_dds.dds_geo .......................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.869+0000] {subprocess.py:106} INFO - [0m15:15:46  9 of 12 SKIP relation ods_dds.dds_location ..................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.873+0000] {subprocess.py:106} INFO - [0m15:15:46  10 of 12 SKIP relation ods_dm.dm_geo_stat ...................................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.876+0000] {subprocess.py:106} INFO - [0m15:15:46  11 of 12 SKIP relation ods_dm.dm_daily_aggregates .............................. [[33mSKIP[0m]
+[2026-04-12T15:15:46.879+0000] {subprocess.py:106} INFO - [0m15:15:46  12 of 12 SKIP relation ods_dm.dm_popular_sources ............................... [[33mSKIP[0m]
+[2026-04-12T15:15:46.885+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.886+0000] {subprocess.py:106} INFO - [0m15:15:46  Finished running 10 incremental models, 2 view models in 0 hours 0 minutes and 0.93 seconds (0.93s).
+[2026-04-12T15:15:46.915+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.915+0000] {subprocess.py:106} INFO - [0m15:15:46  [31mCompleted with 4 errors and 0 warnings:[0m
+[2026-04-12T15:15:46.916+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.917+0000] {subprocess.py:106} INFO - [0m15:15:46    Database Error in model ods_browser (models/ods/ods_browser.sql)
+[2026-04-12T15:15:46.918+0000] {subprocess.py:106} INFO -   Code: 16.
+[2026-04-12T15:15:46.918+0000] {subprocess.py:106} INFO -   DB::Exception: No such column table in table log.ETL_LOG (6dcdb03a-e2c6-4cc5-9588-3fd129c8dde7). Stack trace:
+[2026-04-12T15:15:46.919+0000] {subprocess.py:106} INFO - 
+[2026-04-12T15:15:46.920+0000] {subprocess.py:106} INFO -   0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+[2026-04-12T15:15:46.920+0000] {subprocess.py:106} INFO -   1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+[2026-04-12T15:15:46.921+0000] {subprocess.py:106} INFO -   2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+[2026-04-12T15:15:46.922+0000] {subprocess.py:106} INFO -   3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000f6f3276
+[2026-04-12T15:15:46.924+0000] {subprocess.py:106} INFO -   4. DB::InterpreterInsertQuery::getSampleBlock(DB::ASTInsertQuery const&, std::shared_ptr<DB::IStorage> const&, std::shared_ptr<DB::StorageInMemoryMetadata const> const&, std::shared_ptr<DB::Context const>, bool, bool) @ 0x000000001b63d70e
+[2026-04-12T15:15:46.925+0000] {subprocess.py:106} INFO -   5. DB::AsynchronousInsertQueue::preprocessInsertQuery(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b298bed
+[2026-04-12T15:15:46.925+0000] {subprocess.py:106} INFO -   6. DB::AsynchronousInsertQueue::pushQueryWithInlinedData(boost::intrusive_ptr<DB::IAST>, std::shared_ptr<DB::Context const>) @ 0x000000001b299634
+[2026-04-12T15:15:46.926+0000] {subprocess.py:106} INFO -   7. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8e019
+[2026-04-12T15:15:46.926+0000] {subprocess.py:106} INFO -   8. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+[2026-04-12T15:15:46.927+0000] {subprocess.py:106} INFO -   9. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+[2026-04-12T15:15:46.928+0000] {subprocess.py:106} INFO -   10. DB::TCPHandler::run() @ 0x000000001d23cb24
+[2026-04-12T15:15:46.928+0000] {subprocess.py:106} INFO -   11. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+[2026-04-12T15:15:46.929+0000] {subprocess.py:106} INFO -   12. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+[2026-04-12T15:15:46.930+0000] {subprocess.py:106} INFO -   13. Poco::PooledThread::run() @ 0x0000000022748345
+[2026-04-12T15:15:46.930+0000] {subprocess.py:106} INFO -   14. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+[2026-04-12T15:15:46.931+0000] {subprocess.py:106} INFO -   15. ? @ 0x0000000000094ac3
+[2026-04-12T15:15:46.932+0000] {subprocess.py:106} INFO -   16. __clone @ 0x0000000000125a84
+[2026-04-12T15:15:46.932+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.933+0000] {subprocess.py:106} INFO - [0m15:15:46    Database Error in model ods_device (models/ods/ods_device.sql)
+[2026-04-12T15:15:46.934+0000] {subprocess.py:106} INFO -   Code: 16.
+[2026-04-12T15:15:46.944+0000] {subprocess.py:106} INFO -   DB::Exception: No such column table in table log.ETL_LOG (6dcdb03a-e2c6-4cc5-9588-3fd129c8dde7). Stack trace:
+[2026-04-12T15:15:46.945+0000] {subprocess.py:106} INFO - 
+[2026-04-12T15:15:46.946+0000] {subprocess.py:106} INFO -   0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+[2026-04-12T15:15:46.946+0000] {subprocess.py:106} INFO -   1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+[2026-04-12T15:15:46.947+0000] {subprocess.py:106} INFO -   2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+[2026-04-12T15:15:46.948+0000] {subprocess.py:106} INFO -   3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000f6f3276
+[2026-04-12T15:15:46.949+0000] {subprocess.py:106} INFO -   4. DB::InterpreterInsertQuery::getSampleBlock(DB::ASTInsertQuery const&, std::shared_ptr<DB::IStorage> const&, std::shared_ptr<DB::StorageInMemoryMetadata const> const&, std::shared_ptr<DB::Context const>, bool, bool) @ 0x000000001b63d70e
+[2026-04-12T15:15:46.949+0000] {subprocess.py:106} INFO -   5. DB::AsynchronousInsertQueue::preprocessInsertQuery(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b298bed
+[2026-04-12T15:15:46.950+0000] {subprocess.py:106} INFO -   6. DB::AsynchronousInsertQueue::pushQueryWithInlinedData(boost::intrusive_ptr<DB::IAST>, std::shared_ptr<DB::Context const>) @ 0x000000001b299634
+[2026-04-12T15:15:46.951+0000] {subprocess.py:106} INFO -   7. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8e019
+[2026-04-12T15:15:46.952+0000] {subprocess.py:106} INFO -   8. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+[2026-04-12T15:15:46.952+0000] {subprocess.py:106} INFO -   9. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+[2026-04-12T15:15:46.953+0000] {subprocess.py:106} INFO -   10. DB::TCPHandler::run() @ 0x000000001d23cb24
+[2026-04-12T15:15:46.954+0000] {subprocess.py:106} INFO -   11. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+[2026-04-12T15:15:46.954+0000] {subprocess.py:106} INFO -   12. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+[2026-04-12T15:15:46.955+0000] {subprocess.py:106} INFO -   13. Poco::PooledThread::run() @ 0x0000000022748345
+[2026-04-12T15:15:46.957+0000] {subprocess.py:106} INFO -   14. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+[2026-04-12T15:15:46.958+0000] {subprocess.py:106} INFO -   15. ? @ 0x0000000000094ac3
+[2026-04-12T15:15:46.959+0000] {subprocess.py:106} INFO -   16. __clone @ 0x0000000000125a84
+[2026-04-12T15:15:46.960+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.960+0000] {subprocess.py:106} INFO - [0m15:15:46    Database Error in model ods_geo (models/ods/ods_geo.sql)
+[2026-04-12T15:15:46.961+0000] {subprocess.py:106} INFO -   Code: 16.
+[2026-04-12T15:15:46.962+0000] {subprocess.py:106} INFO -   DB::Exception: No such column table in table log.ETL_LOG (6dcdb03a-e2c6-4cc5-9588-3fd129c8dde7). Stack trace:
+[2026-04-12T15:15:46.962+0000] {subprocess.py:106} INFO - 
+[2026-04-12T15:15:46.963+0000] {subprocess.py:106} INFO -   0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+[2026-04-12T15:15:46.964+0000] {subprocess.py:106} INFO -   1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+[2026-04-12T15:15:46.965+0000] {subprocess.py:106} INFO -   2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+[2026-04-12T15:15:46.966+0000] {subprocess.py:106} INFO -   3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000f6f3276
+[2026-04-12T15:15:46.967+0000] {subprocess.py:106} INFO -   4. DB::InterpreterInsertQuery::getSampleBlock(DB::ASTInsertQuery const&, std::shared_ptr<DB::IStorage> const&, std::shared_ptr<DB::StorageInMemoryMetadata const> const&, std::shared_ptr<DB::Context const>, bool, bool) @ 0x000000001b63d70e
+[2026-04-12T15:15:46.968+0000] {subprocess.py:106} INFO -   5. DB::AsynchronousInsertQueue::preprocessInsertQuery(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b298bed
+[2026-04-12T15:15:46.969+0000] {subprocess.py:106} INFO -   6. DB::AsynchronousInsertQueue::pushQueryWithInlinedData(boost::intrusive_ptr<DB::IAST>, std::shared_ptr<DB::Context const>) @ 0x000000001b299634
+[2026-04-12T15:15:46.970+0000] {subprocess.py:106} INFO -   7. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8e019
+[2026-04-12T15:15:46.971+0000] {subprocess.py:106} INFO -   8. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+[2026-04-12T15:15:46.972+0000] {subprocess.py:106} INFO -   9. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+[2026-04-12T15:15:46.975+0000] {subprocess.py:106} INFO -   10. DB::TCPHandler::run() @ 0x000000001d23cb24
+[2026-04-12T15:15:46.976+0000] {subprocess.py:106} INFO -   11. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+[2026-04-12T15:15:46.976+0000] {subprocess.py:106} INFO -   12. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+[2026-04-12T15:15:46.977+0000] {subprocess.py:106} INFO -   13. Poco::PooledThread::run() @ 0x0000000022748345
+[2026-04-12T15:15:46.978+0000] {subprocess.py:106} INFO -   14. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+[2026-04-12T15:15:46.979+0000] {subprocess.py:106} INFO -   15. ? @ 0x0000000000094ac3
+[2026-04-12T15:15:46.979+0000] {subprocess.py:106} INFO -   16. __clone @ 0x0000000000125a84
+[2026-04-12T15:15:46.980+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:46.981+0000] {subprocess.py:106} INFO - [0m15:15:46    Database Error in model ods_location (models/ods/ods_location.sql)
+[2026-04-12T15:15:46.982+0000] {subprocess.py:106} INFO -   Code: 16.
+[2026-04-12T15:15:46.983+0000] {subprocess.py:106} INFO -   DB::Exception: No such column table in table log.ETL_LOG (6dcdb03a-e2c6-4cc5-9588-3fd129c8dde7). Stack trace:
+[2026-04-12T15:15:46.985+0000] {subprocess.py:106} INFO - 
+[2026-04-12T15:15:46.986+0000] {subprocess.py:106} INFO -   0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x00000000166dc66a
+[2026-04-12T15:15:46.987+0000] {subprocess.py:106} INFO -   1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000e55bf0e
+[2026-04-12T15:15:46.991+0000] {subprocess.py:106} INFO -   2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000e55b849
+[2026-04-12T15:15:46.992+0000] {subprocess.py:106} INFO -   3. DB::Exception::Exception<String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String&&) @ 0x000000000f6f3276
+[2026-04-12T15:15:46.993+0000] {subprocess.py:106} INFO -   4. DB::InterpreterInsertQuery::getSampleBlock(DB::ASTInsertQuery const&, std::shared_ptr<DB::IStorage> const&, std::shared_ptr<DB::StorageInMemoryMetadata const> const&, std::shared_ptr<DB::Context const>, bool, bool) @ 0x000000001b63d70e
+[2026-04-12T15:15:46.994+0000] {subprocess.py:106} INFO -   5. DB::AsynchronousInsertQueue::preprocessInsertQuery(boost::intrusive_ptr<DB::IAST> const&, std::shared_ptr<DB::Context const> const&) @ 0x000000001b298bed
+[2026-04-12T15:15:46.995+0000] {subprocess.py:106} INFO -   6. DB::AsynchronousInsertQueue::pushQueryWithInlinedData(boost::intrusive_ptr<DB::IAST>, std::shared_ptr<DB::Context const>) @ 0x000000001b299634
+[2026-04-12T15:15:46.996+0000] {subprocess.py:106} INFO -   7. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, boost::intrusive_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>, std::function<void ()>, DB::QueryResultDetails&) @ 0x000000001ba8e019
+[2026-04-12T15:15:46.997+0000] {subprocess.py:106} INFO -   8. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001ba891c2
+[2026-04-12T15:15:46.998+0000] {subprocess.py:106} INFO -   9. DB::TCPHandler::runImpl() @ 0x000000001d21a30d
+[2026-04-12T15:15:46.999+0000] {subprocess.py:106} INFO -   10. DB::TCPHandler::run() @ 0x000000001d23cb24
+[2026-04-12T15:15:47.000+0000] {subprocess.py:106} INFO -   11. Poco::Net::TCPServerConnection::start() @ 0x0000000022789647
+[2026-04-12T15:15:47.001+0000] {subprocess.py:106} INFO -   12. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022789bc2
+[2026-04-12T15:15:47.001+0000] {subprocess.py:106} INFO -   13. Poco::PooledThread::run() @ 0x0000000022748345
+[2026-04-12T15:15:47.002+0000] {subprocess.py:106} INFO -   14. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000227468cf
+[2026-04-12T15:15:47.003+0000] {subprocess.py:106} INFO -   15. ? @ 0x0000000000094ac3
+[2026-04-12T15:15:47.004+0000] {subprocess.py:106} INFO -   16. __clone @ 0x0000000000125a84
+[2026-04-12T15:15:47.005+0000] {subprocess.py:106} INFO - [0m15:15:46
+[2026-04-12T15:15:47.008+0000] {subprocess.py:106} INFO - [0m15:15:46  Done. PASS=0 WARN=0 ERROR=4 SKIP=8 TOTAL=12
+[2026-04-12T15:15:47.938+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2026-04-12T15:15:47.954+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-12T15:15:47.962+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=layers_update, task_id=run_dbt, run_id=manual__2026-04-12T15:15:32.323039+00:00, execution_date=20260412T151532, start_date=20260412T151539, end_date=20260412T151547
+[2026-04-12T15:15:48.001+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-12T15:15:48.004+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 4 for task run_dbt (Bash command failed. The command returned a non-zero exit code 1.; 59)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-12T15:15:48.046+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-04-12T15:15:48.074+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-12T15:15:48.081+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

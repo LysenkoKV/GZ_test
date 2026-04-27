@@ -1,0 +1,68 @@
+[2026-04-15T15:39:46.515+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-15T15:39:46.537+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tests_run.run_dbt_tests manual__2026-04-15T15:39:45.485275+00:00 [queued]>
+[2026-04-15T15:39:46.546+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tests_run.run_dbt_tests manual__2026-04-15T15:39:45.485275+00:00 [queued]>
+[2026-04-15T15:39:46.547+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-15T15:39:46.566+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt_tests> on 2026-04-15 15:39:45.485275+00:00
+[2026-04-15T15:39:46.573+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=77) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-15T15:39:46.576+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tests_run', 'run_dbt_tests', 'manual__2026-04-15T15:39:45.485275+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/tests_run.py', '--cfg-path', '/tmp/tmpx8irdsrf']
+[2026-04-15T15:39:46.578+0000] {standard_task_runner.py:72} INFO - Started process 78 to run task
+[2026-04-15T15:39:46.578+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask run_dbt_tests
+[2026-04-15T15:39:46.651+0000] {task_command.py:467} INFO - Running <TaskInstance: tests_run.run_dbt_tests manual__2026-04-15T15:39:45.485275+00:00 [running]> on host fb4321952059
+[2026-04-15T15:39:46.814+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tests_run' AIRFLOW_CTX_TASK_ID='run_dbt_tests' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T15:39:45.485275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-15T15:39:45.485275+00:00'
+[2026-04-15T15:39:46.816+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-15T15:39:46.841+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-04-15T15:39:46.842+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt test']
+[2026-04-15T15:39:46.857+0000] {subprocess.py:99} INFO - Output:
+[2026-04-15T15:39:50.805+0000] {subprocess.py:106} INFO - [0m15:39:50  Running with dbt=1.7.0
+[2026-04-15T15:39:51.198+0000] {subprocess.py:106} INFO - [0m15:39:51  Registered adapter: clickhouse=1.7.0
+[2026-04-15T15:39:52.573+0000] {subprocess.py:106} INFO - [0m15:39:52  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-15T15:39:52.574+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-04-15T15:39:52.575+0000] {subprocess.py:106} INFO - - models.clickhouse_etl.raw
+[2026-04-15T15:39:52.615+0000] {subprocess.py:106} INFO - [0m15:39:52  Found 11 models, 15 tests, 4 sources, 0 exposures, 0 metrics, 538 macros, 0 groups, 0 semantic models
+[2026-04-15T15:39:52.620+0000] {subprocess.py:106} INFO - [0m15:39:52
+[2026-04-15T15:39:53.050+0000] {subprocess.py:106} INFO - [0m15:39:53  Concurrency: 1 threads (target='dev')
+[2026-04-15T15:39:53.051+0000] {subprocess.py:106} INFO - [0m15:39:53
+[2026-04-15T15:39:53.065+0000] {subprocess.py:106} INFO - [0m15:39:53  1 of 15 START test accepted_values_dds_device_device_is_mobile__True__False .... [RUN]
+[2026-04-15T15:39:53.141+0000] {subprocess.py:106} INFO - [0m15:39:53  1 of 15 PASS accepted_values_dds_device_device_is_mobile__True__False .......... [[32mPASS[0m in 0.07s]
+[2026-04-15T15:39:53.144+0000] {subprocess.py:106} INFO - [0m15:39:53  2 of 15 START test accepted_values_dds_device_device_type__Mobile__Computer .... [RUN]
+[2026-04-15T15:39:53.188+0000] {subprocess.py:106} INFO - [0m15:39:53  2 of 15 PASS accepted_values_dds_device_device_type__Mobile__Computer .......... [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.192+0000] {subprocess.py:106} INFO - [0m15:39:53  3 of 15 START test dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ...... [RUN]
+[2026-04-15T15:39:53.241+0000] {subprocess.py:106} INFO - [0m15:39:53  3 of 15 PASS dbt_utils_accepted_range_dds_geo_geo_latitude__90___90 ............ [[32mPASS[0m in 0.05s]
+[2026-04-15T15:39:53.244+0000] {subprocess.py:106} INFO - [0m15:39:53  4 of 15 START test dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ... [RUN]
+[2026-04-15T15:39:53.298+0000] {subprocess.py:106} INFO - [0m15:39:53  4 of 15 PASS dbt_utils_accepted_range_dds_geo_geo_longitude__180___180 ......... [[32mPASS[0m in 0.05s]
+[2026-04-15T15:39:53.301+0000] {subprocess.py:106} INFO - [0m15:39:53  5 of 15 START test email_test_dds_device_user_custom_id ........................ [RUN]
+[2026-04-15T15:39:53.345+0000] {subprocess.py:106} INFO - [0m15:39:53  5 of 15 PASS email_test_dds_device_user_custom_id .............................. [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.348+0000] {subprocess.py:106} INFO - [0m15:39:53  6 of 15 START test not_null_dds_browser_click_id ............................... [RUN]
+[2026-04-15T15:39:53.407+0000] {subprocess.py:106} INFO - [0m15:39:53  6 of 15 PASS not_null_dds_browser_click_id ..................................... [[32mPASS[0m in 0.06s]
+[2026-04-15T15:39:53.415+0000] {subprocess.py:106} INFO - [0m15:39:53  7 of 15 START test not_null_dds_browser_event_id ............................... [RUN]
+[2026-04-15T15:39:53.470+0000] {subprocess.py:106} INFO - [0m15:39:53  7 of 15 PASS not_null_dds_browser_event_id ..................................... [[32mPASS[0m in 0.05s]
+[2026-04-15T15:39:53.473+0000] {subprocess.py:106} INFO - [0m15:39:53  8 of 15 START test not_null_dds_device_click_id ................................ [RUN]
+[2026-04-15T15:39:53.510+0000] {subprocess.py:106} INFO - [0m15:39:53  8 of 15 PASS not_null_dds_device_click_id ...................................... [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.513+0000] {subprocess.py:106} INFO - [0m15:39:53  9 of 15 START test not_null_dds_geo_click_id ................................... [RUN]
+[2026-04-15T15:39:53.552+0000] {subprocess.py:106} INFO - [0m15:39:53  9 of 15 PASS not_null_dds_geo_click_id ......................................... [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.555+0000] {subprocess.py:106} INFO - [0m15:39:53  10 of 15 START test not_null_dds_location_event_id ............................. [RUN]
+[2026-04-15T15:39:53.595+0000] {subprocess.py:106} INFO - [0m15:39:53  10 of 15 PASS not_null_dds_location_event_id ................................... [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.598+0000] {subprocess.py:106} INFO - [0m15:39:53  11 of 15 START test relationships_dds_browser_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-15T15:39:53.652+0000] {subprocess.py:106} INFO - [0m15:39:53  11 of 15 PASS relationships_dds_browser_click_id__click_id__ref_dds_fct_click_ . [[32mPASS[0m in 0.05s]
+[2026-04-15T15:39:53.655+0000] {subprocess.py:106} INFO - [0m15:39:53  12 of 15 START test relationships_dds_browser_event_id__event_id__ref_dds_fct_click_  [RUN]
+[2026-04-15T15:39:53.701+0000] {subprocess.py:106} INFO - [0m15:39:53  12 of 15 PASS relationships_dds_browser_event_id__event_id__ref_dds_fct_click_ . [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.704+0000] {subprocess.py:106} INFO - [0m15:39:53  13 of 15 START test relationships_dds_device_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-15T15:39:53.748+0000] {subprocess.py:106} INFO - [0m15:39:53  13 of 15 PASS relationships_dds_device_click_id__click_id__ref_dds_fct_click_ .. [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.752+0000] {subprocess.py:106} INFO - [0m15:39:53  14 of 15 START test relationships_dds_geo_click_id__click_id__ref_dds_fct_click_  [RUN]
+[2026-04-15T15:39:53.793+0000] {subprocess.py:106} INFO - [0m15:39:53  14 of 15 PASS relationships_dds_geo_click_id__click_id__ref_dds_fct_click_ ..... [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.796+0000] {subprocess.py:106} INFO - [0m15:39:53  15 of 15 START test relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [RUN]
+[2026-04-15T15:39:53.837+0000] {subprocess.py:106} INFO - [0m15:39:53  15 of 15 PASS relationships_dds_location_event_id__event_id__ref_dds_fct_click_  [[32mPASS[0m in 0.04s]
+[2026-04-15T15:39:53.845+0000] {subprocess.py:106} INFO - [0m15:39:53
+[2026-04-15T15:39:53.846+0000] {subprocess.py:106} INFO - [0m15:39:53  Finished running 15 tests in 0 hours 0 minutes and 1.22 seconds (1.22s).
+[2026-04-15T15:39:53.873+0000] {subprocess.py:106} INFO - [0m15:39:53
+[2026-04-15T15:39:53.874+0000] {subprocess.py:106} INFO - [0m15:39:53  [32mCompleted successfully[0m
+[2026-04-15T15:39:53.875+0000] {subprocess.py:106} INFO - [0m15:39:53
+[2026-04-15T15:39:53.875+0000] {subprocess.py:106} INFO - [0m15:39:53  Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
+[2026-04-15T15:39:54.733+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-04-15T15:39:54.772+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-15T15:39:54.773+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tests_run, task_id=run_dbt_tests, run_id=manual__2026-04-15T15:39:45.485275+00:00, execution_date=20260415T153945, start_date=20260415T153946, end_date=20260415T153954
+[2026-04-15T15:39:54.848+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-15T15:39:54.865+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T15:39:54.868+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,34 @@
+[2026-03-26T07:03:39.573+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-26T07:03:39.594+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-03-26T07:03:37.330602+00:00 [queued]>
+[2026-03-26T07:03:39.604+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-03-26T07:03:37.330602+00:00 [queued]>
+[2026-03-26T07:03:39.605+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-03-26T07:03:39.627+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): send_jsonl_to_kafka> on 2026-03-26 07:03:37.330602+00:00
+[2026-03-26T07:03:39.636+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=47) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-26T07:03:39.639+0000] {standard_task_runner.py:72} INFO - Started process 48 to run task
+[2026-03-26T07:03:39.638+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'send_jsonl_to_kafka', 'manual__2026-03-26T07:03:37.330602+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmp58pcez0a']
+[2026-03-26T07:03:39.643+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask send_jsonl_to_kafka
+[2026-03-26T07:03:39.718+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.send_jsonl_to_kafka manual__2026-03-26T07:03:37.330602+00:00 [running]> on host 213f9d148ea3
+[2026-03-26T07:03:39.828+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='send_jsonl_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2026-03-26T07:03:37.330602+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-26T07:03:37.330602+00:00'
+[2026-03-26T07:03:39.829+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-03-26T07:03:39.899+0000] {logging_mixin.py:190} INFO - 📄 Обработка файла: browser_events.jsonl
+[2026-03-26T07:03:39.907+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 100 сообщений
+[2026-03-26T07:03:39.911+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 200 сообщений
+[2026-03-26T07:03:39.916+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 300 сообщений
+[2026-03-26T07:03:39.919+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 400 сообщений
+[2026-03-26T07:03:39.923+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 500 сообщений
+[2026-03-26T07:03:39.929+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 600 сообщений
+[2026-03-26T07:03:39.932+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 700 сообщений
+[2026-03-26T07:03:39.940+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 800 сообщений
+[2026-03-26T07:03:39.944+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 900 сообщений
+[2026-03-26T07:03:39.953+0000] {logging_mixin.py:190} INFO -   📨 Отправлено 1000 сообщений
+[2026-03-26T07:03:39.956+0000] {logging_mixin.py:190} INFO -   ✅ Файл browser_events.jsonl обработан
+[2026-03-26T07:03:40.101+0000] {logging_mixin.py:190} INFO - 
+✅ Итого: 1 файлов, 1000 сообщений отправлено в топик 'browser_events'
+[2026-03-26T07:03:40.103+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-26T07:03:40.118+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-03-26T07:03:40.118+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=send_jsonl_to_kafka, run_id=manual__2026-03-26T07:03:37.330602+00:00, execution_date=20260326T070337, start_date=20260326T070339, end_date=20260326T070340
+[2026-03-26T07:03:40.180+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-26T07:03:40.201+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-26T07:03:40.205+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

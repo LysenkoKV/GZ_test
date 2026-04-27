@@ -1,0 +1,61 @@
+[2026-04-27T07:01:03.958+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-27T07:01:03.979+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-27T07:00:55.978610+00:00 [queued]>
+[2026-04-27T07:01:03.989+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: layers_update.run_dbt manual__2026-04-27T07:00:55.978610+00:00 [queued]>
+[2026-04-27T07:01:03.990+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-27T07:01:04.009+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_dbt> on 2026-04-27 07:00:55.978610+00:00
+[2026-04-27T07:01:04.017+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=58) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-27T07:01:04.019+0000] {standard_task_runner.py:72} INFO - Started process 59 to run task
+[2026-04-27T07:01:04.020+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'layers_update', 'run_dbt', 'manual__2026-04-27T07:00:55.978610+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/layers_update.py', '--cfg-path', '/tmp/tmprazl9738']
+[2026-04-27T07:01:04.024+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask run_dbt
+[2026-04-27T07:01:04.086+0000] {task_command.py:467} INFO - Running <TaskInstance: layers_update.run_dbt manual__2026-04-27T07:00:55.978610+00:00 [running]> on host ff3b5d6261a9
+[2026-04-27T07:01:04.196+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='layers_update' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2026-04-27T07:00:55.978610+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-27T07:00:55.978610+00:00'
+[2026-04-27T07:01:04.197+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-27T07:01:04.218+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-04-27T07:01:04.219+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt run']
+[2026-04-27T07:01:04.232+0000] {subprocess.py:99} INFO - Output:
+[2026-04-27T07:01:09.345+0000] {subprocess.py:106} INFO - [0m07:01:09  Running with dbt=1.7.0
+[2026-04-27T07:01:09.834+0000] {subprocess.py:106} INFO - [0m07:01:09  Registered adapter: clickhouse=1.7.0
+[2026-04-27T07:01:11.132+0000] {subprocess.py:106} INFO - [0m07:01:11  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-27T07:01:11.133+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-04-27T07:01:11.135+0000] {subprocess.py:106} INFO - - models.clickhouse_etl.raw
+[2026-04-27T07:01:11.184+0000] {subprocess.py:106} INFO - [0m07:01:11  Found 11 models, 15 tests, 4 sources, 0 exposures, 0 metrics, 538 macros, 0 groups, 0 semantic models
+[2026-04-27T07:01:11.189+0000] {subprocess.py:106} INFO - [0m07:01:11
+[2026-04-27T07:01:11.825+0000] {subprocess.py:106} INFO - [0m07:01:11  Concurrency: 1 threads (target='dev')
+[2026-04-27T07:01:11.829+0000] {subprocess.py:106} INFO - [0m07:01:11
+[2026-04-27T07:01:11.839+0000] {subprocess.py:106} INFO - [0m07:01:11  1 of 11 START sql incremental model `ods`.`browser_data` ....................... [RUN]
+[2026-04-27T07:01:12.220+0000] {subprocess.py:106} INFO - [0m07:01:12  1 of 11 OK created sql incremental model `ods`.`browser_data` .................. [[32mOK[0m in 0.38s]
+[2026-04-27T07:01:12.222+0000] {subprocess.py:106} INFO - [0m07:01:12  2 of 11 START sql incremental model `ods`.`device_data` ........................ [RUN]
+[2026-04-27T07:01:12.432+0000] {subprocess.py:106} INFO - [0m07:01:12  2 of 11 OK created sql incremental model `ods`.`device_data` ................... [[32mOK[0m in 0.21s]
+[2026-04-27T07:01:12.436+0000] {subprocess.py:106} INFO - [0m07:01:12  3 of 11 START sql incremental model `ods`.`geo_data` ........................... [RUN]
+[2026-04-27T07:01:12.669+0000] {subprocess.py:106} INFO - [0m07:01:12  3 of 11 OK created sql incremental model `ods`.`geo_data` ...................... [[32mOK[0m in 0.23s]
+[2026-04-27T07:01:12.673+0000] {subprocess.py:106} INFO - [0m07:01:12  4 of 11 START sql incremental model `ods`.`location_data` ...................... [RUN]
+[2026-04-27T07:01:12.907+0000] {subprocess.py:106} INFO - [0m07:01:12  4 of 11 OK created sql incremental model `ods`.`location_data` ................. [[32mOK[0m in 0.23s]
+[2026-04-27T07:01:12.911+0000] {subprocess.py:106} INFO - [0m07:01:12  5 of 11 START sql incremental model `dds`.`dim_browser` ........................ [RUN]
+[2026-04-27T07:01:13.151+0000] {subprocess.py:106} INFO - [0m07:01:13  5 of 11 OK created sql incremental model `dds`.`dim_browser` ................... [[32mOK[0m in 0.24s]
+[2026-04-27T07:01:13.156+0000] {subprocess.py:106} INFO - [0m07:01:13  6 of 11 START sql incremental model `dds`.`dim_device` ......................... [RUN]
+[2026-04-27T07:01:13.388+0000] {subprocess.py:106} INFO - [0m07:01:13  6 of 11 OK created sql incremental model `dds`.`dim_device` .................... [[32mOK[0m in 0.23s]
+[2026-04-27T07:01:13.392+0000] {subprocess.py:106} INFO - [0m07:01:13  7 of 11 START sql incremental model `dds`.`fct_click` .......................... [RUN]
+[2026-04-27T07:01:13.641+0000] {subprocess.py:106} INFO - [0m07:01:13  7 of 11 OK created sql incremental model `dds`.`fct_click` ..................... [[32mOK[0m in 0.25s]
+[2026-04-27T07:01:13.645+0000] {subprocess.py:106} INFO - [0m07:01:13  8 of 11 START sql incremental model `dds`.`dim_geo` ............................ [RUN]
+[2026-04-27T07:01:13.875+0000] {subprocess.py:106} INFO - [0m07:01:13  8 of 11 OK created sql incremental model `dds`.`dim_geo` ....................... [[32mOK[0m in 0.23s]
+[2026-04-27T07:01:13.878+0000] {subprocess.py:106} INFO - [0m07:01:13  9 of 11 START sql incremental model `dds`.`dim_location` ....................... [RUN]
+[2026-04-27T07:01:14.100+0000] {subprocess.py:106} INFO - [0m07:01:14  9 of 11 OK created sql incremental model `dds`.`dim_location` .................. [[32mOK[0m in 0.22s]
+[2026-04-27T07:01:14.105+0000] {subprocess.py:106} INFO - [0m07:01:14  10 of 11 START sql incremental model `dm`.`dashboard` .......................... [RUN]
+[2026-04-27T07:01:14.392+0000] {subprocess.py:106} INFO - [0m07:01:14  10 of 11 OK created sql incremental model `dm`.`dashboard` ..................... [[32mOK[0m in 0.28s]
+[2026-04-27T07:01:14.396+0000] {subprocess.py:106} INFO - [0m07:01:14  11 of 11 START sql view model `dm`.`dashboard_recent_data` ..................... [RUN]
+[2026-04-27T07:01:14.470+0000] {subprocess.py:106} INFO - [0m07:01:14  11 of 11 OK created sql view model `dm`.`dashboard_recent_data` ................ [[32mOK[0m in 0.07s]
+[2026-04-27T07:01:14.478+0000] {subprocess.py:106} INFO - [0m07:01:14
+[2026-04-27T07:01:14.479+0000] {subprocess.py:106} INFO - [0m07:01:14  Finished running 10 incremental models, 1 view model in 0 hours 0 minutes and 3.29 seconds (3.29s).
+[2026-04-27T07:01:14.509+0000] {subprocess.py:106} INFO - [0m07:01:14
+[2026-04-27T07:01:14.511+0000] {subprocess.py:106} INFO - [0m07:01:14  [32mCompleted successfully[0m
+[2026-04-27T07:01:14.512+0000] {subprocess.py:106} INFO - [0m07:01:14
+[2026-04-27T07:01:14.513+0000] {subprocess.py:106} INFO - [0m07:01:14  Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[2026-04-27T07:01:16.311+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-04-27T07:01:17.124+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-27T07:01:17.125+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=layers_update, task_id=run_dbt, run_id=manual__2026-04-27T07:00:55.978610+00:00, execution_date=20260427T070055, start_date=20260427T070103, end_date=20260427T070117
+[2026-04-27T07:01:18.503+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-27T07:01:18.530+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-27T07:01:19.023+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2026-04-27T07:01:19.210+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

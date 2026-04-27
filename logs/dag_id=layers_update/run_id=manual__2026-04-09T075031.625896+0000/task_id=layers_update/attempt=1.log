@@ -1,0 +1,59 @@
+[2026-04-09T07:50:38.388+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-09T07:50:38.415+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: layers_update.layers_update manual__2026-04-09T07:50:31.625896+00:00 [queued]>
+[2026-04-09T07:50:38.425+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: layers_update.layers_update manual__2026-04-09T07:50:31.625896+00:00 [queued]>
+[2026-04-09T07:50:38.426+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-09T07:50:38.446+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): layers_update> on 2026-04-09 07:50:31.625896+00:00
+[2026-04-09T07:50:38.455+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=95) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-09T07:50:38.457+0000] {standard_task_runner.py:72} INFO - Started process 96 to run task
+[2026-04-09T07:50:38.457+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'layers_update', 'layers_update', 'manual__2026-04-09T07:50:31.625896+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/layers_update.py', '--cfg-path', '/tmp/tmpm1zv6pfw']
+[2026-04-09T07:50:38.459+0000] {standard_task_runner.py:105} INFO - Job 44: Subtask layers_update
+[2026-04-09T07:50:38.536+0000] {task_command.py:467} INFO - Running <TaskInstance: layers_update.layers_update manual__2026-04-09T07:50:31.625896+00:00 [running]> on host 2d41fd9e80ad
+[2026-04-09T07:50:38.650+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='layers_update' AIRFLOW_CTX_TASK_ID='layers_update' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T07:50:31.625896+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T07:50:31.625896+00:00'
+[2026-04-09T07:50:38.651+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-09T07:51:07.731+0000] {logging_mixin.py:190} INFO - 07:50:41  Running with dbt=1.7.0
+07:50:42  Registered adapter: clickhouse=1.7.0
+07:50:43  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.clickhouse_etl.raw
+07:50:43  Found 12 models, 20 tests, 4 sources, 0 exposures, 0 metrics, 536 macros, 0 groups, 0 semantic models
+07:50:43  
+07:50:43  Concurrency: 1 threads (target='dev')
+07:50:43  
+07:50:43  1 of 12 START sql incremental model `ods_ods`.`browser_data` ................... [RUN]
+07:50:44  1 of 12 OK created sql incremental model `ods_ods`.`browser_data` .............. [OK in 0.21s]
+07:50:44  2 of 12 START sql incremental model `ods_ods`.`device_data` .................... [RUN]
+07:50:44  2 of 12 OK created sql incremental model `ods_ods`.`device_data` ............... [OK in 0.12s]
+07:50:44  3 of 12 START sql incremental model `ods_ods`.`geo_data` ....................... [RUN]
+07:50:44  3 of 12 OK created sql incremental model `ods_ods`.`geo_data` .................. [OK in 0.14s]
+07:50:44  4 of 12 START sql incremental model `ods_ods`.`location_data` .................. [RUN]
+07:50:44  4 of 12 OK created sql incremental model `ods_ods`.`location_data` ............. [OK in 0.11s]
+07:50:44  5 of 12 START sql incremental model `ods_dds`.`dim_browser` .................... [RUN]
+07:50:44  5 of 12 OK created sql incremental model `ods_dds`.`dim_browser` ............... [OK in 0.13s]
+07:50:44  6 of 12 START sql incremental model `ods_dds`.`dim_device` ..................... [RUN]
+07:50:44  6 of 12 OK created sql incremental model `ods_dds`.`dim_device` ................ [OK in 0.12s]
+07:50:44  7 of 12 START sql incremental model `ods_dds`.`fct_click` ...................... [RUN]
+07:50:44  7 of 12 OK created sql incremental model `ods_dds`.`fct_click` ................. [OK in 0.15s]
+07:50:44  8 of 12 START sql incremental model `ods_dds`.`dim_geo` ........................ [RUN]
+07:50:45  8 of 12 OK created sql incremental model `ods_dds`.`dim_geo` ................... [OK in 0.10s]
+07:50:45  9 of 12 START sql incremental model `ods_dds`.`dim_location` ................... [RUN]
+07:50:45  9 of 12 OK created sql incremental model `ods_dds`.`dim_location` .............. [OK in 0.11s]
+07:50:45  10 of 12 START sql view model `ods_dm`.`geo_stat` .............................. [RUN]
+07:50:45  10 of 12 OK created sql view model `ods_dm`.`geo_stat` ......................... [OK in 0.14s]
+07:50:45  11 of 12 START sql incremental model `ods_dm`.`daily_aggregates` ............... [RUN]
+07:50:54  11 of 12 OK created sql incremental model `ods_dm`.`daily_aggregates` .......... [OK in 7.76s]
+07:50:54  12 of 12 START sql view model `ods_dm`.`popular_source` ........................ [RUN]
+07:50:59  12 of 12 OK created sql view model `ods_dm`.`popular_source` ................... [OK in 5.06s]
+07:51:00  
+07:51:00  Finished running 10 incremental models, 2 view models in 0 hours 0 minutes and 16.36 seconds (16.36s).
+07:51:01  
+07:51:01  Completed successfully
+07:51:01  
+07:51:01  Done. PASS=12 WARN=0 ERROR=0 SKIP=0 TOTAL=12
+[2026-04-09T07:51:07.733+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-09T07:51:07.749+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-09T07:51:07.749+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=layers_update, task_id=layers_update, run_id=manual__2026-04-09T07:50:31.625896+00:00, execution_date=20260409T075031, start_date=20260409T075038, end_date=20260409T075107
+[2026-04-09T07:51:09.838+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-09T07:51:09.867+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T07:51:10.495+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

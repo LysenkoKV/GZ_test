@@ -1,0 +1,112 @@
+[2026-04-21T06:23:09.248+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-21T06:23:09.278+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T06:23:09.292+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T06:23:09.293+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-21T06:23:09.311+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_data> on 2026-04-19 18:30:00+00:00
+[2026-04-21T06:23:09.321+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=48) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-21T06:23:09.329+0000] {standard_task_runner.py:72} INFO - Started process 49 to run task
+[2026-04-21T06:23:09.333+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'get_data', 'scheduled__2026-04-19T18:30:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpknxof0xq']
+[2026-04-21T06:23:09.335+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask get_data
+[2026-04-21T06:23:09.445+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [running]> on host 102489dc19a9
+[2026-04-21T06:23:09.640+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-19T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-19T18:30:00+00:00'
+[2026-04-21T06:23:09.641+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-21T06:23:09.718+0000] {kafka_load.py:28} INFO - Обрабатывается файл: browser_events.jsonl
+[2026-04-21T06:23:09.730+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-21T06:23:09.733+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-21T06:23:09.736+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-21T06:23:09.741+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-21T06:23:09.744+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-21T06:23:09.747+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-21T06:23:09.749+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-21T06:23:09.753+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-21T06:23:09.756+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-21T06:23:09.759+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-21T06:23:09.760+0000] {kafka_load.py:53} INFO - Обработка файла browser_events.jsonl завершена
+[2026-04-21T06:23:09.761+0000] {kafka_load.py:28} INFO - Обрабатывается файл: device_events.jsonl
+[2026-04-21T06:23:09.769+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-21T06:23:09.775+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-21T06:23:09.780+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-21T06:23:09.788+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-21T06:23:09.791+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-21T06:23:09.796+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-21T06:23:09.799+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-21T06:23:09.803+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-21T06:23:09.806+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-21T06:23:09.809+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-21T06:23:09.810+0000] {kafka_load.py:42} ERROR - Ошибка JSON в строке: 1001: Expecting ':' delimiter: line 1 column 19 (char 18)
+[2026-04-21T06:23:09.917+0000] {kafka_load.py:53} INFO - Обработка файла device_events.jsonl завершена
+[2026-04-21T06:23:09.917+0000] {kafka_load.py:28} INFO - Обрабатывается файл: geo_events.jsonl
+[2026-04-21T06:23:09.923+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-21T06:23:09.927+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-21T06:23:09.929+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-21T06:23:09.931+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-21T06:23:09.933+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-21T06:23:09.935+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-21T06:23:09.938+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-21T06:23:09.942+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-21T06:23:09.952+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-21T06:23:09.959+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-21T06:23:09.960+0000] {kafka_load.py:53} INFO - Обработка файла geo_events.jsonl завершена
+[2026-04-21T06:23:09.960+0000] {kafka_load.py:28} INFO - Обрабатывается файл: location_events.jsonl
+[2026-04-21T06:23:09.973+0000] {kafka_load.py:40} INFO - Отправлено 100 сообщений
+[2026-04-21T06:23:09.976+0000] {kafka_load.py:40} INFO - Отправлено 200 сообщений
+[2026-04-21T06:23:09.979+0000] {kafka_load.py:40} INFO - Отправлено 300 сообщений
+[2026-04-21T06:23:09.982+0000] {kafka_load.py:40} INFO - Отправлено 400 сообщений
+[2026-04-21T06:23:09.984+0000] {kafka_load.py:40} INFO - Отправлено 500 сообщений
+[2026-04-21T06:23:09.986+0000] {kafka_load.py:40} INFO - Отправлено 600 сообщений
+[2026-04-21T06:23:09.989+0000] {kafka_load.py:40} INFO - Отправлено 700 сообщений
+[2026-04-21T06:23:09.992+0000] {kafka_load.py:40} INFO - Отправлено 800 сообщений
+[2026-04-21T06:23:09.994+0000] {kafka_load.py:40} INFO - Отправлено 900 сообщений
+[2026-04-21T06:23:10.005+0000] {kafka_load.py:40} INFO - Отправлено 1000 сообщений
+[2026-04-21T06:23:10.006+0000] {kafka_load.py:53} INFO - Обработка файла location_events.jsonl завершена
+[2026-04-21T06:23:10.075+0000] {kafka_load.py:56} INFO - Обработка файлов успешно завершена
+[2026-04-21T06:23:10.077+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-21T06:23:10.094+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-21T06:23:10.095+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=get_data, run_id=scheduled__2026-04-19T18:30:00+00:00, execution_date=20260419T183000, start_date=20260421T062309, end_date=20260421T062310
+[2026-04-21T06:23:10.152+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-21T06:23:10.182+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-21T06:23:10.187+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-04-21T07:33:47.760+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-21T07:33:47.794+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T07:33:47.805+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T07:33:47.806+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-21T07:33:47.825+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_data> on 2026-04-19 18:30:00+00:00
+[2026-04-21T07:33:47.833+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=47) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-21T07:33:47.835+0000] {standard_task_runner.py:72} INFO - Started process 48 to run task
+[2026-04-21T07:33:47.839+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'get_data', 'scheduled__2026-04-19T18:30:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpd3ksam9r']
+[2026-04-21T07:33:47.841+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask get_data
+[2026-04-21T07:33:47.918+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [running]> on host f8fb5e06f85d
+[2026-04-21T07:33:48.038+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-19T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-19T18:30:00+00:00'
+[2026-04-21T07:33:48.039+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-21T07:33:48.087+0000] {kafka_load.py:63} ERROR - Выполнение цепочки DAG прервано из-за кричической ошибки при загрузке данных в Kafka: [Errno 6] No such device or address
+[2026-04-21T07:33:48.089+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-21T07:33:48.106+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-21T07:33:48.107+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=get_data, run_id=scheduled__2026-04-19T18:30:00+00:00, execution_date=20260419T183000, start_date=20260421T073347, end_date=20260421T073348
+[2026-04-21T07:33:48.176+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-21T07:33:48.208+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-21T07:33:48.210+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-04-21T07:48:19.780+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-21T07:48:19.812+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T07:48:19.828+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [queued]>
+[2026-04-21T07:48:19.829+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-04-21T07:48:19.852+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_data> on 2026-04-19 18:30:00+00:00
+[2026-04-21T07:48:19.869+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=48) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-21T07:48:19.874+0000] {standard_task_runner.py:72} INFO - Started process 49 to run task
+[2026-04-21T07:48:19.873+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_producer', 'get_data', 'scheduled__2026-04-19T18:30:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/kafka_load.py', '--cfg-path', '/tmp/tmpv8pt1xbh']
+[2026-04-21T07:48:19.875+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask get_data
+[2026-04-21T07:48:19.970+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_producer.get_data scheduled__2026-04-19T18:30:00+00:00 [running]> on host 685b945180b2
+[2026-04-21T07:48:20.125+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_producer' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-19T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-19T18:30:00+00:00'
+[2026-04-21T07:48:20.127+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-21T07:48:20.181+0000] {kafka_load.py:59} ERROR - Выполнение цепочки DAG прервано из-за кричической ошибки при загрузке данных в Kafka: [Errno 6] No such device or address
+[2026-04-21T07:48:20.183+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-21T07:48:20.204+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-21T07:48:20.205+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kafka_producer, task_id=get_data, run_id=scheduled__2026-04-19T18:30:00+00:00, execution_date=20260419T183000, start_date=20260421T074819, end_date=20260421T074820
+[2026-04-21T07:48:20.295+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-21T07:48:20.366+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-21T07:48:20.371+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

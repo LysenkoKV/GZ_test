@@ -1,0 +1,147 @@
+[2026-04-16T15:33:07.437+0000] {processor.py:186} INFO - Started process (PID=32) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:07.456+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:33:07.476+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:07.474+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:07.675+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:07.769+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:07.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:33:07.896+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:07.895+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:33:07.962+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.585 seconds
+[2026-04-16T15:33:39.482+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:39.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:33:39.539+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:39.537+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:39.847+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:33:40.524+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:40.524+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:33:41.728+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:33:41.727+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:33:42.014+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 2.604 seconds
+[2026-04-16T15:34:13.289+0000] {processor.py:186} INFO - Started process (PID=38) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:13.303+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:34:13.355+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:13.354+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:13.980+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:14.289+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:14.289+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:34:16.729+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:16.728+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:34:16.888+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 3.709 seconds
+[2026-04-16T15:34:47.232+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:47.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:34:47.249+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:47.248+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:47.322+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:34:47.406+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:47.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:34:47.524+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:34:47.523+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:34:47.612+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.428 seconds
+[2026-04-16T15:35:18.533+0000] {processor.py:186} INFO - Started process (PID=44) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:18.535+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:35:18.543+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:18.542+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:18.584+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:18.618+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:18.618+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:35:18.680+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:18.680+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:35:18.712+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.190 seconds
+[2026-04-16T15:35:48.791+0000] {processor.py:186} INFO - Started process (PID=47) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:48.792+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:35:48.807+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:48.806+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:48.867+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:35:48.920+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:48.919+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:35:48.957+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:35:48.957+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:35:48.983+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.205 seconds
+[2026-04-16T15:36:19.466+0000] {processor.py:186} INFO - Started process (PID=50) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:19.470+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:36:19.474+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:19.474+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:19.517+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:19.560+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:19.560+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:36:19.596+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:19.596+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:36:19.626+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.172 seconds
+[2026-04-16T15:36:50.084+0000] {processor.py:186} INFO - Started process (PID=53) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:50.085+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:36:50.088+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:50.088+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:50.118+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:36:50.159+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:50.159+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:36:50.221+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:36:50.221+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:36:50.269+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.194 seconds
+[2026-04-16T15:37:20.504+0000] {processor.py:186} INFO - Started process (PID=56) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:20.506+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:37:20.511+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:20.510+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:20.568+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:20.620+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:20.620+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:37:20.675+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:20.675+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:37:20.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.251 seconds
+[2026-04-16T15:37:51.162+0000] {processor.py:186} INFO - Started process (PID=59) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:51.163+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:37:51.174+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:51.170+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:51.228+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:37:51.310+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:51.309+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:37:51.401+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:37:51.397+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:37:51.444+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.293 seconds
+[2026-04-16T15:38:22.110+0000] {processor.py:186} INFO - Started process (PID=62) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:22.111+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:38:22.115+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:22.115+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:22.150+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:22.178+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:22.178+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:38:22.217+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:22.217+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:38:22.245+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.144 seconds
+[2026-04-16T15:38:52.398+0000] {processor.py:186} INFO - Started process (PID=65) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:52.402+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:38:52.412+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:52.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:52.458+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:38:52.510+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:52.509+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:38:52.568+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:38:52.567+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:38:52.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.217 seconds
+[2026-04-16T15:39:23.091+0000] {processor.py:186} INFO - Started process (PID=68) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:23.093+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:39:23.100+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:23.099+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:23.148+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:23.175+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:23.175+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:39:23.206+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:23.205+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:39:23.730+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.648 seconds
+[2026-04-16T15:39:54.070+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:54.071+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:39:54.085+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:54.074+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:54.138+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:39:54.172+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:54.172+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:39:54.204+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:39:54.203+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:39:54.230+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.183 seconds
+[2026-04-16T15:40:24.634+0000] {processor.py:186} INFO - Started process (PID=74) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:24.636+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:40:24.641+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:24.641+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:24.681+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:24.711+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:24.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:40:24.747+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:24.747+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:40:24.782+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.157 seconds
+[2026-04-16T15:40:55.201+0000] {processor.py:186} INFO - Started process (PID=77) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:55.203+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:40:55.207+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:55.207+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:55.250+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:40:55.299+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:55.289+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:40:55.336+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:40:55.335+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:40:55.366+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.178 seconds
+[2026-04-16T15:41:25.755+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:25.757+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:41:25.762+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:25.761+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:25.809+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:25.844+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:25.844+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:41:25.883+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:25.883+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:41:25.909+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.163 seconds
+[2026-04-16T15:41:56.375+0000] {processor.py:186} INFO - Started process (PID=83) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:56.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:41:56.432+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:56.432+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:56.532+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:41:56.577+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:56.577+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:41:56.610+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:41:56.610+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:41:56.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.282 seconds
+[2026-04-16T15:42:27.086+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:27.088+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:42:27.092+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:27.091+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:27.132+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:27.176+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:27.176+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:42:27.211+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:27.211+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:42:27.237+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.161 seconds
+[2026-04-16T15:42:57.788+0000] {processor.py:186} INFO - Started process (PID=89) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:57.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:42:57.794+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:57.794+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:57.836+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:42:57.865+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:57.865+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:42:57.908+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:42:57.908+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:42:57.935+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.159 seconds
+[2026-04-16T15:43:28.604+0000] {processor.py:186} INFO - Started process (PID=92) to work on /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:43:28.605+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_load.py for tasks to queue
+[2026-04-16T15:43:28.609+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:43:28.608+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:43:28.644+0000] {processor.py:925} INFO - DAG(s) 'kafka_producer' retrieved from /opt/airflow/dags/kafka_load.py
+[2026-04-16T15:43:28.672+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:43:28.672+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-04-16T15:43:28.703+0000] {logging_mixin.py:190} INFO - [2026-04-16T15:43:28.703+0000] {dag.py:4180} INFO - Setting next_dagrun for kafka_producer to 2026-04-15 18:30:00+00:00, run_after=2026-04-16 18:30:00+00:00
+[2026-04-16T15:43:28.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_load.py took 0.134 seconds

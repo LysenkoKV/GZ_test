@@ -1,0 +1,20 @@
+[2026-03-22T12:41:51.876+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-22T12:41:52.122+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_connections.test_kafka_connection manual__2026-03-22T12:41:48.392222+00:00 [queued]>
+[2026-03-22T12:41:52.130+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_connections.test_kafka_connection manual__2026-03-22T12:41:48.392222+00:00 [queued]>
+[2026-03-22T12:41:52.131+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-03-22T12:41:52.151+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): test_kafka_connection> on 2026-03-22 12:41:48.392222+00:00
+[2026-03-22T12:41:52.162+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=49) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-22T12:41:52.168+0000] {standard_task_runner.py:72} INFO - Started process 53 to run task
+[2026-03-22T12:41:52.168+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_connections', 'test_kafka_connection', 'manual__2026-03-22T12:41:48.392222+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/test_clickhouse.py', '--cfg-path', '/tmp/tmpivjqbcwp']
+[2026-03-22T12:41:52.172+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask test_kafka_connection
+[2026-03-22T12:41:52.300+0000] {task_command.py:467} INFO - Running <TaskInstance: test_connections.test_kafka_connection manual__2026-03-22T12:41:48.392222+00:00 [running]> on host c89d29d28897
+[2026-03-22T12:41:52.504+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_connections' AIRFLOW_CTX_TASK_ID='test_kafka_connection' AIRFLOW_CTX_EXECUTION_DATE='2026-03-22T12:41:48.392222+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-22T12:41:48.392222+00:00'
+[2026-03-22T12:41:52.518+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-03-22T12:41:52.617+0000] {logging_mixin.py:190} INFO - ✅ Успешно подключено к Kafka!
+[2026-03-22T12:41:52.619+0000] {python.py:240} INFO - Done. Returned value was: OK
+[2026-03-22T12:41:52.667+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-03-22T12:41:52.668+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=test_connections, task_id=test_kafka_connection, run_id=manual__2026-03-22T12:41:48.392222+00:00, execution_date=20260322T124148, start_date=20260322T124152, end_date=20260322T124152
+[2026-03-22T12:41:52.767+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-22T12:41:52.779+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

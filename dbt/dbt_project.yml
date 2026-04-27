@@ -1,0 +1,24 @@
+name: 'clickhouse_etl'
+version: '1.0.0'
+config-version: 2
+
+profile: 'clickhouse_etl'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  clickhouse_etl:
+    raw:
+      +materialized: view
+      +schema: raw
+    ods:
+      +materialized: table
+      +schema: ods
+    dds:
+      +materialized: table
+      +schema: dds
+
+vars:
+  truncate: false

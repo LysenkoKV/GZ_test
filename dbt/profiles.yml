@@ -1,0 +1,11 @@
+clickhouse_etl:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      host: clickhouse
+      port: 9000
+      user: admin
+      password: admin
+      dbname: default
+      secure: False

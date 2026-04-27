@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: ''
+    tables:
+      - name: device_data
+      - name: browser_data
+      - name: location_data
+      - name: geo_data
